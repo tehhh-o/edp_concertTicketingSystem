@@ -103,7 +103,7 @@
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(153, 49);
             this.button7.TabIndex = 11;
-            this.button7.Text = "create event button";
+            this.button7.Text = "create event button 2";
             this.button7.UseVisualStyleBackColor = true;
             // 
             // label2
