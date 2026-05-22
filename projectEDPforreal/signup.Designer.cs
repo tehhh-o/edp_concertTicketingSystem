@@ -37,25 +37,25 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.signupPanel = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
-            this.loginPanel = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.textBox6 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
+            this.loginPanel = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
             this.signupPanel.SuspendLayout();
-            this.loginPanel.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.loginPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -64,7 +64,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(196, 35);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(124, 39);
+            this.label1.Size = new System.Drawing.Size(119, 38);
             this.label1.TabIndex = 0;
             this.label1.Text = "signup";
             // 
@@ -148,13 +148,33 @@
             this.groupBox1.Text = "groupBox1";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(361, 342);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(108, 52);
+            this.button5.TabIndex = 9;
+            this.button5.Text = "login";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(23, 342);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(108, 52);
+            this.button3.TabIndex = 8;
+            this.button3.Text = "Back";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // signupPanel
             // 
             this.signupPanel.Controls.Add(this.label5);
             this.signupPanel.Controls.Add(this.groupBox1);
             this.signupPanel.Location = new System.Drawing.Point(22, 51);
             this.signupPanel.Name = "signupPanel";
-            this.signupPanel.Size = new System.Drawing.Size(740, 600);
+            this.signupPanel.Size = new System.Drawing.Size(639, 600);
             this.signupPanel.TabIndex = 9;
             this.signupPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -166,15 +186,6 @@
             this.label5.Size = new System.Drawing.Size(92, 16);
             this.label5.TabIndex = 9;
             this.label5.Text = "panel1/signup";
-            // 
-            // loginPanel
-            // 
-            this.loginPanel.Controls.Add(this.groupBox2);
-            this.loginPanel.Controls.Add(this.label6);
-            this.loginPanel.Location = new System.Drawing.Point(626, 51);
-            this.loginPanel.Name = "loginPanel";
-            this.loginPanel.Size = new System.Drawing.Size(740, 600);
-            this.loginPanel.TabIndex = 10;
             // 
             // label6
             // 
@@ -202,39 +213,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "groupBox2";
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(184, 206);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(171, 52);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Login";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(196, 35);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(106, 39);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Login";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(150, 161);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(263, 22);
-            this.textBox5.TabIndex = 5;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(150, 108);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(263, 22);
-            this.textBox6.TabIndex = 4;
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -245,25 +223,12 @@
             this.label10.TabIndex = 1;
             this.label10.Text = "Name/Email";
             // 
-            // button3
+            // textBox6
             // 
-            this.button3.Location = new System.Drawing.Point(23, 342);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(108, 52);
-            this.button3.TabIndex = 8;
-            this.button3.Text = "Back";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(36, 342);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(108, 52);
-            this.button4.TabIndex = 9;
-            this.button4.Text = "Back";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.textBox6.Location = new System.Drawing.Point(150, 108);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(263, 22);
+            this.textBox6.TabIndex = 4;
             // 
             // label9
             // 
@@ -275,15 +240,41 @@
             this.label9.TabIndex = 2;
             this.label9.Text = "Password";
             // 
-            // button5
+            // textBox5
             // 
-            this.button5.Location = new System.Drawing.Point(361, 342);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(108, 52);
-            this.button5.TabIndex = 9;
-            this.button5.Text = "login";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.textBox5.Location = new System.Drawing.Point(150, 161);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(263, 22);
+            this.textBox5.TabIndex = 5;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(196, 35);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(101, 38);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Login";
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(184, 206);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(171, 52);
+            this.button2.TabIndex = 7;
+            this.button2.Text = "Login";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(36, 342);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(108, 52);
+            this.button4.TabIndex = 9;
+            this.button4.Text = "Back";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button6
             // 
@@ -295,11 +286,20 @@
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
+            // loginPanel
+            // 
+            this.loginPanel.Controls.Add(this.groupBox2);
+            this.loginPanel.Controls.Add(this.label6);
+            this.loginPanel.Location = new System.Drawing.Point(721, 51);
+            this.loginPanel.Name = "loginPanel";
+            this.loginPanel.Size = new System.Drawing.Size(620, 600);
+            this.loginPanel.TabIndex = 10;
+            // 
             // signup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1135, 663);
+            this.ClientSize = new System.Drawing.Size(1402, 663);
             this.Controls.Add(this.signupPanel);
             this.Controls.Add(this.loginPanel);
             this.Name = "signup";
@@ -308,10 +308,10 @@
             this.groupBox1.PerformLayout();
             this.signupPanel.ResumeLayout(false);
             this.signupPanel.PerformLayout();
-            this.loginPanel.ResumeLayout(false);
-            this.loginPanel.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.loginPanel.ResumeLayout(false);
+            this.loginPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -328,19 +328,19 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Panel signupPanel;
-        private System.Windows.Forms.Panel loginPanel;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Panel loginPanel;
     }
 }
