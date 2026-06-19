@@ -34,13 +34,19 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.signupBtn = new System.Windows.Forms.Button();
             this.loginBtn = new System.Windows.Forms.Button();
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,7 +54,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(18, 16);
+            this.label1.Location = new System.Drawing.Point(12, 38);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(201, 32);
             this.label1.TabIndex = 0;
@@ -64,82 +70,45 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(992, 87);
+            this.button4.Location = new System.Drawing.Point(956, 101);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(117, 40);
+            this.button4.Size = new System.Drawing.Size(138, 40);
             this.button4.TabIndex = 6;
             this.button4.Text = "search event btn";
             this.button4.UseVisualStyleBackColor = true;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(741, 96);
+            this.textBox1.Location = new System.Drawing.Point(465, 101);
+            this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(236, 22);
+            this.textBox1.Size = new System.Drawing.Size(461, 40);
             this.textBox1.TabIndex = 7;
             this.textBox1.Text = "search event text";
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(12, 482);
+            this.button5.Location = new System.Drawing.Point(12, 513);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.Size = new System.Drawing.Size(95, 57);
             this.button5.TabIndex = 9;
             this.button5.Text = "prev ";
             this.button5.UseVisualStyleBackColor = true;
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(353, 482);
+            this.button6.Location = new System.Drawing.Point(333, 513);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
+            this.button6.Size = new System.Drawing.Size(95, 57);
             this.button6.TabIndex = 10;
             this.button6.Text = "next button";
             this.button6.UseVisualStyleBackColor = true;
             // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(970, 16);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(153, 49);
-            this.button7.TabIndex = 11;
-            this.button7.Text = "create event button 2";
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(475, 102);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 16);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "categories";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(478, 132);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 13;
-            this.comboBox1.Text = "category list";
-            // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.HorizontalScrollbar = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(627, 132);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.ScrollAlwaysVisible = true;
-            this.listBox1.Size = new System.Drawing.Size(496, 516);
-            this.listBox1.TabIndex = 14;
-            // 
             // signupBtn
             // 
-            this.signupBtn.Location = new System.Drawing.Point(250, 24);
+            this.signupBtn.Location = new System.Drawing.Point(943, 9);
             this.signupBtn.Name = "signupBtn";
-            this.signupBtn.Size = new System.Drawing.Size(75, 23);
+            this.signupBtn.Size = new System.Drawing.Size(75, 52);
             this.signupBtn.TabIndex = 15;
             this.signupBtn.Text = "signup";
             this.signupBtn.UseVisualStyleBackColor = true;
@@ -147,25 +116,121 @@
             // 
             // loginBtn
             // 
-            this.loginBtn.Location = new System.Drawing.Point(353, 24);
+            this.loginBtn.Location = new System.Drawing.Point(1024, 9);
             this.loginBtn.Name = "loginBtn";
-            this.loginBtn.Size = new System.Drawing.Size(75, 23);
+            this.loginBtn.Size = new System.Drawing.Size(75, 52);
             this.loginBtn.TabIndex = 16;
             this.loginBtn.Text = "login";
             this.loginBtn.UseVisualStyleBackColor = true;
             this.loginBtn.Click += new System.EventHandler(this.loginBtn_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(465, 200);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(186, 119);
+            this.button1.TabIndex = 17;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(462, 165);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(99, 16);
+            this.label2.TabIndex = 18;
+            this.label2.Text = "featured events";
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(685, 200);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(186, 119);
+            this.button2.TabIndex = 19;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(908, 200);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(186, 119);
+            this.button3.TabIndex = 20;
+            this.button3.Text = "button3";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(465, 344);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(186, 119);
+            this.button7.TabIndex = 21;
+            this.button7.Text = "button7";
+            this.button7.UseVisualStyleBackColor = true;
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(685, 344);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(186, 119);
+            this.button8.TabIndex = 22;
+            this.button8.Text = "button8";
+            this.button8.UseVisualStyleBackColor = true;
+            // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(908, 344);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(186, 119);
+            this.button9.TabIndex = 23;
+            this.button9.Text = "button9";
+            this.button9.UseVisualStyleBackColor = true;
+            // 
+            // button10
+            // 
+            this.button10.Location = new System.Drawing.Point(465, 482);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(186, 119);
+            this.button10.TabIndex = 24;
+            this.button10.Text = "button10";
+            this.button10.UseVisualStyleBackColor = true;
+            // 
+            // button11
+            // 
+            this.button11.Location = new System.Drawing.Point(685, 482);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(186, 119);
+            this.button11.TabIndex = 25;
+            this.button11.Text = "button11";
+            this.button11.UseVisualStyleBackColor = true;
+            // 
+            // button12
+            // 
+            this.button12.Location = new System.Drawing.Point(908, 482);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(186, 119);
+            this.button12.TabIndex = 26;
+            this.button12.Text = "button12";
+            this.button12.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1135, 663);
+            this.Controls.Add(this.button12);
+            this.Controls.Add(this.button11);
+            this.Controls.Add(this.button10);
+            this.Controls.Add(this.button9);
+            this.Controls.Add(this.button8);
+            this.Controls.Add(this.button7);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.loginBtn);
             this.Controls.Add(this.signupBtn);
-            this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.textBox1);
@@ -189,13 +254,19 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Button signupBtn;
         private System.Windows.Forms.Button loginBtn;
         private System.Windows.Forms.HelpProvider helpProvider1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button button12;
     }
 }
 

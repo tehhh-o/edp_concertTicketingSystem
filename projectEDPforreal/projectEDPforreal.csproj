@@ -46,6 +46,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="checkout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="checkout.Designer.cs">
+      <DependentUpon>checkout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="eventbrowser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="eventbrowser.Designer.cs">
+      <DependentUpon>eventbrowser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="eventdetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="eventdetail.Designer.cs">
+      <DependentUpon>eventdetail.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +78,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="checkout.resx">
+      <DependentUpon>checkout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="eventbrowser.resx">
+      <DependentUpon>eventbrowser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="eventdetail.resx">
+      <DependentUpon>eventdetail.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
