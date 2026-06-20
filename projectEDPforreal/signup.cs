@@ -53,5 +53,10 @@ namespace projectEDPforreal
             signupPanel.Visible = true;
             loginPanel.Visible = false;
         }
+
+        private void signup_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
