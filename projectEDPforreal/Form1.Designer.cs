@@ -54,7 +54,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 38);
+            this.label1.Location = new System.Drawing.Point(12, 29);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(201, 32);
             this.label1.TabIndex = 0;
@@ -130,7 +130,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(186, 119);
             this.button1.TabIndex = 17;
-            this.button1.Text = "button1";
+            this.button1.Text = "movie1";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // label2
@@ -148,7 +148,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(186, 119);
             this.button2.TabIndex = 19;
-            this.button2.Text = "button2";
+            this.button2.Text = "movie2";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // button3
@@ -157,7 +157,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(186, 119);
             this.button3.TabIndex = 20;
-            this.button3.Text = "button3";
+            this.button3.Text = "movie3";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // button7
@@ -166,7 +166,7 @@
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(186, 119);
             this.button7.TabIndex = 21;
-            this.button7.Text = "button7";
+            this.button7.Text = "movie4";
             this.button7.UseVisualStyleBackColor = true;
             // 
             // button8
@@ -175,7 +175,7 @@
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(186, 119);
             this.button8.TabIndex = 22;
-            this.button8.Text = "button8";
+            this.button8.Text = "movie5";
             this.button8.UseVisualStyleBackColor = true;
             // 
             // button9
@@ -184,7 +184,7 @@
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(186, 119);
             this.button9.TabIndex = 23;
-            this.button9.Text = "button9";
+            this.button9.Text = "movie6";
             this.button9.UseVisualStyleBackColor = true;
             // 
             // button10
@@ -193,7 +193,7 @@
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(186, 119);
             this.button10.TabIndex = 24;
-            this.button10.Text = "button10";
+            this.button10.Text = "movie7";
             this.button10.UseVisualStyleBackColor = true;
             // 
             // button11
@@ -202,7 +202,7 @@
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(186, 119);
             this.button11.TabIndex = 25;
-            this.button11.Text = "button11";
+            this.button11.Text = "movie8";
             this.button11.UseVisualStyleBackColor = true;
             // 
             // button12
@@ -211,7 +211,7 @@
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(186, 119);
             this.button12.TabIndex = 26;
-            this.button12.Text = "button12";
+            this.button12.Text = "movie9";
             this.button12.UseVisualStyleBackColor = true;
             // 
             // Form1

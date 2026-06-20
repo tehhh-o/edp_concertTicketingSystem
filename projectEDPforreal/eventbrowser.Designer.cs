@@ -128,7 +128,7 @@
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(186, 119);
             this.button6.TabIndex = 27;
-            this.button6.Text = "button6";
+            this.button6.Text = "movie";
             this.button6.UseVisualStyleBackColor = true;
             // 
             // button7
