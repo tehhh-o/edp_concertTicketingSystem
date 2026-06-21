@@ -16,7 +16,7 @@ namespace projectEDPforreal
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new signup());
+            Application.Run(new AdminMain());
         }
     }
 }

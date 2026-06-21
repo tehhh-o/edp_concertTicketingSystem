@@ -45,13 +45,12 @@ namespace projectEDPforreal
 
             SqlCommand cmd = connection.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "insert into [Concert] (concert_id, concert_name, concert_details, venue, date, ticket_price, available_seat) " + "values ('" + ConIdTB.Text + "','" + ConNameTB.Text + "','" + ConDetailTB.Text + "','" + VenueTB.Text + "','" + DateDTP.Value.ToString("yyyy-MM-dd") + "','" + TicPriceTB.Text + "','" + SeatTB.Text + "')";
+            cmd.CommandText = "insert into [Concert] (concert_id, concert_name, concert_details, date, ticket_price, available_seat) " + "values ('" + ConIdTB.Text + "','" + ConNameTB.Text + "','" + ConDetailTB.Text + "','" + DateDTP.Value.ToString("yyyy-MM-dd") + "','" + TicPriceTB.Text + "','" + SeatTB.Text + "')";
             cmd.ExecuteNonQuery();
             connection.Close();
             ConIdTB.Text = "";
             ConNameTB.Text = "";
             ConDetailTB.Text = "";
-            VenueTB.Text = "";
             DateDTP.Value = DateTime.Now;
             TicPriceTB.Text = "";
             SeatTB.Text = "";
@@ -84,13 +83,12 @@ namespace projectEDPforreal
 
             SqlCommand cmd = connection.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "update [Concert] set concert_name = '" + ConNameTB.Text + "', concert_details = '" + ConDetailTB.Text + "', venue = '" + VenueTB.Text + "', date = '" + DateDTP.Value.ToString("yyyy-MM-dd") + "', ticket_price = '" + TicPriceTB.Text + "', available_seat = '" + SeatTB.Text + "' where concert_id = '" + ConIdTB.Text + "'";
+            cmd.CommandText = "update [Concert] set concert_name = '" + ConNameTB.Text + "', concert_details = '" + ConDetailTB.Text + "', date = '" + DateDTP.Value.ToString("yyyy-MM-dd") + "', ticket_price = '" + TicPriceTB.Text + "', available_seat = '" + SeatTB.Text + "' where concert_id = '" + ConIdTB.Text + "'";
             cmd.ExecuteNonQuery();
             connection.Close();
             ConIdTB.Text = "";
             ConNameTB.Text = "";
             ConDetailTB.Text = "";
-            VenueTB.Text = "";
             DateDTP.Value = DateTime.Now;
             TicPriceTB.Text = "";
             SeatTB.Text = "";

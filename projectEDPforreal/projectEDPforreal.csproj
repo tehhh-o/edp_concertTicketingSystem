@@ -105,6 +105,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Ticket2U.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AdminMain.resx">
+      <DependentUpon>AdminMain.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="checkout.resx">
       <DependentUpon>checkout.cs</DependentUpon>
     </EmbeddedResource>
