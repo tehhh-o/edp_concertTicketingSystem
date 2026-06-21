@@ -36,5 +36,12 @@ namespace projectEDPforreal
             this.Hide();
 //jangankan gunung furqan gunung aqil pun aku tahan
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            eventbrowser form2 = new eventbrowser();
+            form2.Show();
+            this.Hide();
+        }
     }
 }
