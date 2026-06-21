@@ -29,28 +29,21 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblDate = new System.Windows.Forms.Label();
+            this.lblLocation = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
+            this.rowA = new System.Windows.Forms.CheckBox();
+            this.rowB = new System.Windows.Forms.CheckBox();
+            this.rowC = new System.Windows.Forms.CheckBox();
+            this.lstSeats = new System.Windows.Forms.ListBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -59,49 +52,49 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(201, 32);
+            this.label1.Size = new System.Drawing.Size(153, 32);
             this.label1.TabIndex = 2;
-            this.label1.Text = "nama website";
+            this.label1.Text = "Ticket2Go";
             // 
-            // label2
+            // lblName
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(285, 31);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 16);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "event name";
+            this.lblName.AutoSize = true;
+            this.lblName.Location = new System.Drawing.Point(292, 43);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(77, 16);
+            this.lblName.TabIndex = 3;
+            this.lblName.Text = "event name";
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.lblDate);
+            this.groupBox1.Controls.Add(this.lblLocation);
             this.groupBox1.Controls.Add(this.pictureBox1);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(18, 54);
+            this.groupBox1.Controls.Add(this.lblName);
+            this.groupBox1.Location = new System.Drawing.Point(145, 67);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(512, 207);
+            this.groupBox1.Size = new System.Drawing.Size(772, 207);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.groupBox1.Text = "Event Summary";
             // 
-            // label4
+            // lblDate
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(285, 148);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(37, 16);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "actor";
+            this.lblDate.AutoSize = true;
+            this.lblDate.Location = new System.Drawing.Point(292, 156);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(70, 16);
+            this.lblDate.TabIndex = 7;
+            this.lblDate.Text = "event date";
             // 
-            // label3
+            // lblLocation
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(285, 86);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(54, 16);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "location";
+            this.lblLocation.AutoSize = true;
+            this.lblLocation.Location = new System.Drawing.Point(292, 100);
+            this.lblLocation.Name = "lblLocation";
+            this.lblLocation.Size = new System.Drawing.Size(83, 16);
+            this.lblLocation.TabIndex = 6;
+            this.lblLocation.Text = "event details";
             // 
             // pictureBox1
             // 
@@ -113,141 +106,96 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.listBox1);
-            this.groupBox2.Controls.Add(this.button3);
-            this.groupBox2.Controls.Add(this.button2);
-            this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.button1);
-            this.groupBox2.Location = new System.Drawing.Point(31, 326);
+            this.groupBox2.Controls.Add(this.lstSeats);
+            this.groupBox2.Controls.Add(this.rowC);
+            this.groupBox2.Controls.Add(this.rowB);
+            this.groupBox2.Controls.Add(this.rowA);
+            this.groupBox2.Controls.Add(this.label9);
+            this.groupBox2.Location = new System.Drawing.Point(145, 304);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(524, 347);
+            this.groupBox2.Size = new System.Drawing.Size(772, 347);
             this.groupBox2.TabIndex = 12;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "seat selection";
             // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(20, 105);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(397, 100);
-            this.listBox1.TabIndex = 14;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(251, 65);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 16;
-            this.button3.Text = "row C";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(139, 65);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 15;
-            this.button2.Text = "row B";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(17, 32);
+            this.label9.Location = new System.Drawing.Point(24, 33);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(44, 16);
+            this.label9.Size = new System.Drawing.Size(107, 16);
             this.label9.TabIndex = 14;
-            this.label9.Text = "label9";
+            this.label9.Text = "Choose your row";
+            // 
+            // rowA
+            // 
+            this.rowA.AutoSize = true;
+            this.rowA.Location = new System.Drawing.Point(89, 70);
+            this.rowA.Name = "rowA";
+            this.rowA.Size = new System.Drawing.Size(68, 20);
+            this.rowA.TabIndex = 15;
+            this.rowA.Text = "Row A";
+            this.rowA.UseVisualStyleBackColor = true;
+            this.rowA.CheckedChanged += new System.EventHandler(this.rowA_CheckedChanged);
+            // 
+            // rowB
+            // 
+            this.rowB.AutoSize = true;
+            this.rowB.Location = new System.Drawing.Point(219, 69);
+            this.rowB.Name = "rowB";
+            this.rowB.Size = new System.Drawing.Size(68, 20);
+            this.rowB.TabIndex = 16;
+            this.rowB.Text = "Row B";
+            this.rowB.UseVisualStyleBackColor = true;
+            this.rowB.CheckedChanged += new System.EventHandler(this.rowB_CheckedChanged);
+            // 
+            // rowC
+            // 
+            this.rowC.AutoSize = true;
+            this.rowC.Location = new System.Drawing.Point(352, 69);
+            this.rowC.Name = "rowC";
+            this.rowC.Size = new System.Drawing.Size(68, 20);
+            this.rowC.TabIndex = 17;
+            this.rowC.Text = "Row C";
+            this.rowC.UseVisualStyleBackColor = true;
+            this.rowC.CheckedChanged += new System.EventHandler(this.rowC_CheckedChanged);
+            // 
+            // lstSeats
+            // 
+            this.lstSeats.FormattingEnabled = true;
+            this.lstSeats.ItemHeight = 16;
+            this.lstSeats.Location = new System.Drawing.Point(42, 107);
+            this.lstSeats.Name = "lstSeats";
+            this.lstSeats.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
+            this.lstSeats.Size = new System.Drawing.Size(448, 196);
+            this.lstSeats.TabIndex = 18;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(20, 65);
+            this.button1.Location = new System.Drawing.Point(545, 159);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "row A";
+            this.button1.Size = new System.Drawing.Size(180, 70);
+            this.button1.TabIndex = 19;
+            this.button1.Text = "Checkout Button";
             this.button1.UseVisualStyleBackColor = true;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.button4);
-            this.groupBox3.Controls.Add(this.groupBox4);
-            this.groupBox3.Location = new System.Drawing.Point(590, 326);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(498, 347);
-            this.groupBox3.TabIndex = 13;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "summary";
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(21, 218);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(458, 58);
-            this.button4.TabIndex = 17;
-            this.button4.Text = "proceed to checkout";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.label14);
-            this.groupBox4.Controls.Add(this.label13);
-            this.groupBox4.Controls.Add(this.label12);
-            this.groupBox4.Location = new System.Drawing.Point(21, 45);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(458, 137);
-            this.groupBox4.TabIndex = 19;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "groupBox4";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(102, 102);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(65, 16);
-            this.label14.TabIndex = 22;
-            this.label14.Text = "total price";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(102, 66);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(61, 16);
-            this.label13.TabIndex = 21;
-            this.label13.Text = "total seat";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(102, 32);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(77, 16);
-            this.label12.TabIndex = 20;
-            this.label12.Text = "event name";
             // 
             // eventdetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1100, 685);
-            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Name = "eventdetail";
             this.Text = "eventdetail";
+            this.Load += new System.EventHandler(this.eventdetail_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -256,22 +204,17 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblDate;
+        private System.Windows.Forms.Label lblLocation;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.CheckBox rowC;
+        private System.Windows.Forms.CheckBox rowB;
+        private System.Windows.Forms.CheckBox rowA;
+        private System.Windows.Forms.ListBox lstSeats;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label12;
     }
 }
