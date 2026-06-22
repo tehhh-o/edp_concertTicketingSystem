@@ -33,8 +33,6 @@ namespace projectEDPforreal
         private void loginBtn_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Login Log = new Login();
-            Log.ShowDialog();
             this.Close();
         }
 
