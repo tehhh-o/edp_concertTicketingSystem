@@ -63,8 +63,6 @@
             this.DeleteBtn = new System.Windows.Forms.Button();
             this.ClearBtn = new System.Windows.Forms.Button();
             this.ReportBtn = new System.Windows.Forms.Button();
-            this.ReceiptBtn = new System.Windows.Forms.Button();
-            this.BoMarkBtn = new System.Windows.Forms.Button();
             this.concertDataGridView = new System.Windows.Forms.DataGridView();
             this.concertidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.concertnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -176,7 +174,7 @@
             this.concertBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.concertBindingNavigator.Name = "concertBindingNavigator";
             this.concertBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.concertBindingNavigator.Size = new System.Drawing.Size(1482, 27);
+            this.concertBindingNavigator.Size = new System.Drawing.Size(1482, 31);
             this.concertBindingNavigator.TabIndex = 0;
             this.concertBindingNavigator.Text = "bindingNavigator1";
             this.concertBindingNavigator.RefreshItems += new System.EventHandler(this.concertBindingNavigator_RefreshItems);
@@ -186,7 +184,7 @@
             this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorAddNewItem.Text = "Add new";
             // 
             // concertBindingSource
@@ -202,7 +200,7 @@
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 24);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 28);
             this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
@@ -211,7 +209,7 @@
             this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
             // bindingNavigatorMoveFirstItem
@@ -219,7 +217,7 @@
             this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorMoveFirstItem.Text = "Move first";
             // 
             // bindingNavigatorMovePreviousItem
@@ -227,13 +225,13 @@
             this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorMovePreviousItem.Text = "Move previous";
             // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 27);
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 31);
             // 
             // bindingNavigatorPositionItem
             // 
@@ -248,14 +246,14 @@
             // bindingNavigatorSeparator1
             // 
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 27);
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 31);
             // 
             // bindingNavigatorMoveNextItem
             // 
             this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorMoveNextItem.Text = "Move next";
             // 
             // bindingNavigatorMoveLastItem
@@ -263,19 +261,19 @@
             this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorMoveLastItem.Text = "Move last";
             // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 31);
             // 
             // concertBindingNavigatorSaveItem
             // 
             this.concertBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.concertBindingNavigatorSaveItem.Name = "concertBindingNavigatorSaveItem";
-            this.concertBindingNavigatorSaveItem.Size = new System.Drawing.Size(29, 24);
+            this.concertBindingNavigatorSaveItem.Size = new System.Drawing.Size(29, 28);
             this.concertBindingNavigatorSaveItem.Text = "Save Data";
             this.concertBindingNavigatorSaveItem.Click += new System.EventHandler(this.concertBindingNavigatorSaveItem_Click);
             // 
@@ -391,24 +389,6 @@
             this.ReportBtn.UseVisualStyleBackColor = true;
             this.ReportBtn.Click += new System.EventHandler(this.ReportBtn_Click);
             // 
-            // ReceiptBtn
-            // 
-            this.ReceiptBtn.Location = new System.Drawing.Point(195, 457);
-            this.ReceiptBtn.Name = "ReceiptBtn";
-            this.ReceiptBtn.Size = new System.Drawing.Size(128, 35);
-            this.ReceiptBtn.TabIndex = 21;
-            this.ReceiptBtn.Text = "RECEIPT PAGE";
-            this.ReceiptBtn.UseVisualStyleBackColor = true;
-            // 
-            // BoMarkBtn
-            // 
-            this.BoMarkBtn.Location = new System.Drawing.Point(360, 457);
-            this.BoMarkBtn.Name = "BoMarkBtn";
-            this.BoMarkBtn.Size = new System.Drawing.Size(170, 35);
-            this.BoMarkBtn.TabIndex = 22;
-            this.BoMarkBtn.Text = "BOOKMARK PAGE";
-            this.BoMarkBtn.UseVisualStyleBackColor = true;
-            // 
             // concertDataGridView
             // 
             this.concertDataGridView.AutoGenerateColumns = false;
@@ -522,8 +502,6 @@
             this.ClientSize = new System.Drawing.Size(1482, 503);
             this.Controls.Add(this.ConManLbl);
             this.Controls.Add(this.concertDataGridView);
-            this.Controls.Add(this.BoMarkBtn);
-            this.Controls.Add(this.ReceiptBtn);
             this.Controls.Add(this.ReportBtn);
             this.Controls.Add(this.ClearBtn);
             this.Controls.Add(this.DeleteBtn);
@@ -588,8 +566,6 @@
         private System.Windows.Forms.Button DeleteBtn;
         private System.Windows.Forms.Button ClearBtn;
         private System.Windows.Forms.Button ReportBtn;
-        private System.Windows.Forms.Button ReceiptBtn;
-        private System.Windows.Forms.Button BoMarkBtn;
         private Ticket2UTableAdapters.ConcertTableAdapter concertTableAdapter;
         private Ticket2UTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.DataGridView concertDataGridView;

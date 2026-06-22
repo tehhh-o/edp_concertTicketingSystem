@@ -164,21 +164,11 @@ namespace projectEDPforreal
             return null;
         }
 
-        private void ReceiptBtn_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void ConManBtn_Click(object sender, EventArgs e)
         {
             AdminMain admin = new AdminMain();
             admin.Show();
             this.Hide();
-        }
-
-        private void BoMarkBtn_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
