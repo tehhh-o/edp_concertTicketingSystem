@@ -361,3 +361,5 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/projectEDPforreal/Ticket2U.mdf
+/projectEDPforreal/Ticket2U_log.ldf
