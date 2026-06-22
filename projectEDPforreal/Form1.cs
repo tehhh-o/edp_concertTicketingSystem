@@ -37,5 +37,12 @@ namespace projectEDPforreal
             Log.ShowDialog();
             this.Close();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            eventbrowser form2 = new eventbrowser();
+            form2.Show();
+            this.Hide();
+        }
     }
 }
