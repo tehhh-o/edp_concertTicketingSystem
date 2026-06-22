@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(checkout));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -50,20 +51,22 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.Visapic = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Visapic)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(201, 32);
+            this.label1.Size = new System.Drawing.Size(141, 37);
             this.label1.TabIndex = 3;
-            this.label1.Text = "nama website";
+            this.label1.Text = "Ticket4U";
             // 
             // label2
             // 
@@ -139,6 +142,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.Visapic);
             this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Controls.Add(this.textBox4);
             this.groupBox2.Controls.Add(this.label6);
@@ -152,6 +156,7 @@
             this.groupBox2.TabIndex = 12;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "card information";
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // button1
             // 
@@ -259,11 +264,22 @@
             this.label9.TabIndex = 14;
             this.label9.Text = "event name";
             // 
+            // Visapic
+            // 
+            this.Visapic.Image = ((System.Drawing.Image)(resources.GetObject("Visapic.Image")));
+            this.Visapic.Location = new System.Drawing.Point(355, 129);
+            this.Visapic.Name = "Visapic";
+            this.Visapic.Size = new System.Drawing.Size(79, 63);
+            this.Visapic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Visapic.TabIndex = 14;
+            this.Visapic.TabStop = false;
+            this.Visapic.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // checkout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1091, 697);
+            this.ClientSize = new System.Drawing.Size(1091, 678);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -271,12 +287,14 @@
             this.Controls.Add(this.label1);
             this.Name = "checkout";
             this.Text = "checkout";
+            this.Load += new System.EventHandler(this.checkout_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Visapic)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -306,5 +324,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.PictureBox Visapic;
     }
 }

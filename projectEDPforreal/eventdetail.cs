@@ -17,6 +17,14 @@ namespace projectEDPforreal
             InitializeComponent();
         }
 
-        
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void sit_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
