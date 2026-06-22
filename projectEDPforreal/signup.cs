@@ -36,29 +36,13 @@ namespace projectEDPforreal
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Form1 login = new Form1();
-            login.Show();
-            this.Hide();
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            Form1 login = new Form1();
-            login.Show();
-            this.Hide();
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            signupPanel.Visible = false;
-            loginPanel.Visible = true;
 
         }
 
+        
         private void button6_Click(object sender, EventArgs e)
         {
-            signupPanel.Visible = true;
-            loginPanel.Visible = false;
+
         }
 
         private void signup_Load(object sender, EventArgs e)
@@ -66,7 +50,7 @@ namespace projectEDPforreal
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void signUp_Click(object sender, EventArgs e)
         {
             try
             {
@@ -77,13 +61,11 @@ namespace projectEDPforreal
                 {
                     con.Open();
 
-                    // Get latest user_id
                     string getIdQuery = "SELECT ISNULL(MAX(user_id), 0) + 1 FROM [User]";
                     SqlCommand getIdCmd = new SqlCommand(getIdQuery, con);
 
                     int newUserId = Convert.ToInt32(getIdCmd.ExecuteScalar());
 
-                    // Insert new user with generated user_id
                     string query = "INSERT INTO [User] (user_id, name, email, password, phone_number, user_type) " +
                                    "VALUES (@user_id, @name, @email, @password, @phone_number, @user_type)";
 
@@ -98,11 +80,17 @@ namespace projectEDPforreal
                     cmd.ExecuteNonQuery();
                 }
 
-                MessageBox.Show("Sign up successful!");
+                MessageBox.Show("Sign up successful!", "", MessageBoxButtons.OK, MessageBoxIcon.Information) ;
+
+                this.Hide();
+                Login Log = new Login();
+                Log.ShowDialog();
+                this.Close();
+
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message);
+                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -114,6 +102,31 @@ namespace projectEDPforreal
         private void cmbUserType_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+       
+
+        private void loginPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void txtLoginEmail_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtLoginPassword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Login Log = new Login();
+            Log.ShowDialog();
+            this.Close();
         }
     }
     
