@@ -30,11 +30,14 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Report));
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.ticket2U = new projectEDPforreal.Ticket2U();
-            this.concertBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.concertTableAdapter = new projectEDPforreal.Ticket2UTableAdapters.ConcertTableAdapter();
+            this.bookingBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bookingTableAdapter = new projectEDPforreal.Ticket2UTableAdapters.BookingTableAdapter();
             this.tableAdapterManager = new projectEDPforreal.Ticket2UTableAdapters.TableAdapterManager();
-            this.concertBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bookingBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
@@ -46,8 +49,8 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-            this.concertBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.concertDataGridView = new System.Windows.Forms.DataGridView();
+            this.bookingBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.bookingDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,11 +58,22 @@
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SearchBtn = new System.Windows.Forms.Button();
+            this.SearchTbox = new System.Windows.Forms.TextBox();
+            this.SortTotTicBtn = new System.Windows.Forms.Button();
+            this.SortDateBtn = new System.Windows.Forms.Button();
+            this.GenChartButton = new System.Windows.Forms.Button();
+            this.ReportChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.ConManBtn = new System.Windows.Forms.Button();
+            this.ReceiptBtn = new System.Windows.Forms.Button();
+            this.BoMarkBtn = new System.Windows.Forms.Button();
+            this.ReportLbl = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ticket2U)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.concertBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.concertBindingNavigator)).BeginInit();
-            this.concertBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.concertDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookingBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookingBindingNavigator)).BeginInit();
+            this.bookingBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bookingDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ReportChart)).BeginInit();
             this.SuspendLayout();
             // 
             // ticket2U
@@ -67,21 +81,21 @@
             this.ticket2U.DataSetName = "Ticket2U";
             this.ticket2U.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // concertBindingSource
+            // bookingBindingSource
             // 
-            this.concertBindingSource.DataMember = "Concert";
-            this.concertBindingSource.DataSource = this.ticket2U;
+            this.bookingBindingSource.DataMember = "Booking";
+            this.bookingBindingSource.DataSource = this.ticket2U;
             // 
-            // concertTableAdapter
+            // bookingTableAdapter
             // 
-            this.concertTableAdapter.ClearBeforeFill = true;
+            this.bookingTableAdapter.ClearBeforeFill = true;
             // 
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.BookingTableAdapter = null;
+            this.tableAdapterManager.BookingTableAdapter = this.bookingTableAdapter;
             this.tableAdapterManager.BookMarkTableAdapter = null;
-            this.tableAdapterManager.ConcertTableAdapter = this.concertTableAdapter;
+            this.tableAdapterManager.ConcertTableAdapter = null;
             this.tableAdapterManager.PaymentTableAdapter = null;
             this.tableAdapterManager.SeatTableAdapter = null;
             this.tableAdapterManager.TicketTableAdapter = null;
@@ -89,14 +103,14 @@
             this.tableAdapterManager.UpdateOrder = projectEDPforreal.Ticket2UTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.UserTableAdapter = null;
             // 
-            // concertBindingNavigator
+            // bookingBindingNavigator
             // 
-            this.concertBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.concertBindingNavigator.BindingSource = this.concertBindingSource;
-            this.concertBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.concertBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
-            this.concertBindingNavigator.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.concertBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bookingBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.bookingBindingNavigator.BindingSource = this.bookingBindingSource;
+            this.bookingBindingNavigator.CountItem = this.bindingNavigatorCountItem;
+            this.bookingBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.bookingBindingNavigator.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.bookingBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
             this.bindingNavigatorSeparator,
@@ -108,17 +122,17 @@
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
-            this.concertBindingNavigatorSaveItem});
-            this.concertBindingNavigator.Location = new System.Drawing.Point(0, 0);
-            this.concertBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.concertBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.concertBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.concertBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.concertBindingNavigator.Name = "concertBindingNavigator";
-            this.concertBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.concertBindingNavigator.Size = new System.Drawing.Size(800, 27);
-            this.concertBindingNavigator.TabIndex = 0;
-            this.concertBindingNavigator.Text = "bindingNavigator1";
+            this.bookingBindingNavigatorSaveItem});
+            this.bookingBindingNavigator.Location = new System.Drawing.Point(0, 0);
+            this.bookingBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.bookingBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.bookingBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.bookingBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.bookingBindingNavigator.Name = "bookingBindingNavigator";
+            this.bookingBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
+            this.bookingBindingNavigator.Size = new System.Drawing.Size(1482, 27);
+            this.bookingBindingNavigator.TabIndex = 0;
+            this.bookingBindingNavigator.Text = "bindingNavigator1";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -126,7 +140,7 @@
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 22);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMoveFirstItem.Text = "Move first";
             // 
             // bindingNavigatorMovePreviousItem
@@ -135,18 +149,19 @@
             this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 22);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMovePreviousItem.Text = "Move previous";
             // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 27);
             // 
             // bindingNavigatorPositionItem
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 27);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -155,14 +170,14 @@
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 20);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 24);
             this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
             // bindingNavigatorSeparator1
             // 
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 6);
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 27);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -185,7 +200,7 @@
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 6);
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
             // bindingNavigatorAddNewItem
             // 
@@ -205,20 +220,20 @@
             this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
-            // concertBindingNavigatorSaveItem
+            // bookingBindingNavigatorSaveItem
             // 
-            this.concertBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.concertBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("concertBindingNavigatorSaveItem.Image")));
-            this.concertBindingNavigatorSaveItem.Name = "concertBindingNavigatorSaveItem";
-            this.concertBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 23);
-            this.concertBindingNavigatorSaveItem.Text = "Save Data";
-            this.concertBindingNavigatorSaveItem.Click += new System.EventHandler(this.concertBindingNavigatorSaveItem_Click);
+            this.bookingBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bookingBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("bookingBindingNavigatorSaveItem.Image")));
+            this.bookingBindingNavigatorSaveItem.Name = "bookingBindingNavigatorSaveItem";
+            this.bookingBindingNavigatorSaveItem.Size = new System.Drawing.Size(29, 24);
+            this.bookingBindingNavigatorSaveItem.Text = "Save Data";
+            this.bookingBindingNavigatorSaveItem.Click += new System.EventHandler(this.bookingBindingNavigatorSaveItem_Click);
             // 
-            // concertDataGridView
+            // bookingDataGridView
             // 
-            this.concertDataGridView.AutoGenerateColumns = false;
-            this.concertDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.concertDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.bookingDataGridView.AutoGenerateColumns = false;
+            this.bookingDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.bookingDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
@@ -226,86 +241,200 @@
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn7});
-            this.concertDataGridView.DataSource = this.concertBindingSource;
-            this.concertDataGridView.Location = new System.Drawing.Point(42, 83);
-            this.concertDataGridView.Name = "concertDataGridView";
-            this.concertDataGridView.RowHeadersWidth = 51;
-            this.concertDataGridView.RowTemplate.Height = 24;
-            this.concertDataGridView.Size = new System.Drawing.Size(608, 220);
-            this.concertDataGridView.TabIndex = 1;
+            this.bookingDataGridView.DataSource = this.bookingBindingSource;
+            this.bookingDataGridView.Location = new System.Drawing.Point(12, 117);
+            this.bookingDataGridView.Name = "bookingDataGridView";
+            this.bookingDataGridView.RowHeadersWidth = 51;
+            this.bookingDataGridView.RowTemplate.Height = 24;
+            this.bookingDataGridView.Size = new System.Drawing.Size(920, 287);
+            this.bookingDataGridView.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn1
             // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "concert_id";
-            this.dataGridViewTextBoxColumn1.HeaderText = "concert_id";
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "booking_id";
+            this.dataGridViewTextBoxColumn1.HeaderText = "booking_id";
             this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.Width = 125;
             // 
             // dataGridViewTextBoxColumn2
             // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "concert_name";
-            this.dataGridViewTextBoxColumn2.HeaderText = "concert_name";
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "user_id";
+            this.dataGridViewTextBoxColumn2.HeaderText = "user_id";
             this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.Width = 125;
             // 
             // dataGridViewTextBoxColumn3
             // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "concert_details";
-            this.dataGridViewTextBoxColumn3.HeaderText = "concert_details";
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "concert_id";
+            this.dataGridViewTextBoxColumn3.HeaderText = "concert_id";
             this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.Width = 125;
             // 
             // dataGridViewTextBoxColumn4
             // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "venue";
-            this.dataGridViewTextBoxColumn4.HeaderText = "venue";
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "booking_date";
+            this.dataGridViewTextBoxColumn4.HeaderText = "booking_date";
             this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.Width = 125;
             // 
             // dataGridViewTextBoxColumn5
             // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "date";
-            this.dataGridViewTextBoxColumn5.HeaderText = "date";
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "total_ticket";
+            this.dataGridViewTextBoxColumn5.HeaderText = "total_ticket";
             this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             this.dataGridViewTextBoxColumn5.Width = 125;
             // 
             // dataGridViewTextBoxColumn6
             // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "ticket_price";
-            this.dataGridViewTextBoxColumn6.HeaderText = "ticket_price";
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "total_price";
+            this.dataGridViewTextBoxColumn6.HeaderText = "total_price";
             this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             this.dataGridViewTextBoxColumn6.Width = 125;
             // 
             // dataGridViewTextBoxColumn7
             // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "available_seat";
-            this.dataGridViewTextBoxColumn7.HeaderText = "available_seat";
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "status";
+            this.dataGridViewTextBoxColumn7.HeaderText = "status";
             this.dataGridViewTextBoxColumn7.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             this.dataGridViewTextBoxColumn7.Width = 125;
+            // 
+            // SearchBtn
+            // 
+            this.SearchBtn.Location = new System.Drawing.Point(297, 76);
+            this.SearchBtn.Name = "SearchBtn";
+            this.SearchBtn.Size = new System.Drawing.Size(90, 35);
+            this.SearchBtn.TabIndex = 2;
+            this.SearchBtn.Text = "SEARCH";
+            this.SearchBtn.UseVisualStyleBackColor = true;
+            this.SearchBtn.Click += new System.EventHandler(this.SearchBtn_Click);
+            // 
+            // SearchTbox
+            // 
+            this.SearchTbox.Location = new System.Drawing.Point(28, 82);
+            this.SearchTbox.Multiline = true;
+            this.SearchTbox.Name = "SearchTbox";
+            this.SearchTbox.Size = new System.Drawing.Size(255, 24);
+            this.SearchTbox.TabIndex = 3;
+            // 
+            // SortTotTicBtn
+            // 
+            this.SortTotTicBtn.Location = new System.Drawing.Point(439, 76);
+            this.SortTotTicBtn.Name = "SortTotTicBtn";
+            this.SortTotTicBtn.Size = new System.Drawing.Size(223, 35);
+            this.SortTotTicBtn.TabIndex = 4;
+            this.SortTotTicBtn.Text = "SORT BY TOTAL TICKET";
+            this.SortTotTicBtn.UseVisualStyleBackColor = true;
+            this.SortTotTicBtn.Click += new System.EventHandler(this.SortTotTicBtn_Click);
+            // 
+            // SortDateBtn
+            // 
+            this.SortDateBtn.Location = new System.Drawing.Point(715, 76);
+            this.SortDateBtn.Name = "SortDateBtn";
+            this.SortDateBtn.Size = new System.Drawing.Size(187, 35);
+            this.SortDateBtn.TabIndex = 5;
+            this.SortDateBtn.Text = "SORT BY DATE";
+            this.SortDateBtn.UseVisualStyleBackColor = true;
+            this.SortDateBtn.Click += new System.EventHandler(this.SortDateBtn_Click);
+            // 
+            // GenChartButton
+            // 
+            this.GenChartButton.Location = new System.Drawing.Point(745, 410);
+            this.GenChartButton.Name = "GenChartButton";
+            this.GenChartButton.Size = new System.Drawing.Size(187, 35);
+            this.GenChartButton.TabIndex = 6;
+            this.GenChartButton.Text = "GENERATE CHART";
+            this.GenChartButton.UseVisualStyleBackColor = true;
+            this.GenChartButton.Click += new System.EventHandler(this.GenChartButton_Click);
+            // 
+            // ReportChart
+            // 
+            chartArea4.Name = "ChartArea1";
+            this.ReportChart.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.ReportChart.Legends.Add(legend4);
+            this.ReportChart.Location = new System.Drawing.Point(949, 76);
+            this.ReportChart.Name = "ReportChart";
+            series4.ChartArea = "ChartArea1";
+            series4.Legend = "Legend1";
+            series4.Name = "Series1";
+            this.ReportChart.Series.Add(series4);
+            this.ReportChart.Size = new System.Drawing.Size(507, 416);
+            this.ReportChart.TabIndex = 7;
+            this.ReportChart.Text = "chart1";
+            // 
+            // ConManBtn
+            // 
+            this.ConManBtn.Location = new System.Drawing.Point(28, 457);
+            this.ConManBtn.Name = "ConManBtn";
+            this.ConManBtn.Size = new System.Drawing.Size(255, 35);
+            this.ConManBtn.TabIndex = 21;
+            this.ConManBtn.Text = "CONCERT MANAGEMENT PAGE";
+            this.ConManBtn.UseVisualStyleBackColor = true;
+            this.ConManBtn.Click += new System.EventHandler(this.ConManBtn_Click);
+            // 
+            // ReceiptBtn
+            // 
+            this.ReceiptBtn.Location = new System.Drawing.Point(335, 457);
+            this.ReceiptBtn.Name = "ReceiptBtn";
+            this.ReceiptBtn.Size = new System.Drawing.Size(128, 35);
+            this.ReceiptBtn.TabIndex = 22;
+            this.ReceiptBtn.Text = "RECEIPT PAGE";
+            this.ReceiptBtn.UseVisualStyleBackColor = true;
+            this.ReceiptBtn.Click += new System.EventHandler(this.ReceiptBtn_Click);
+            // 
+            // BoMarkBtn
+            // 
+            this.BoMarkBtn.Location = new System.Drawing.Point(515, 456);
+            this.BoMarkBtn.Name = "BoMarkBtn";
+            this.BoMarkBtn.Size = new System.Drawing.Size(170, 35);
+            this.BoMarkBtn.TabIndex = 23;
+            this.BoMarkBtn.Text = "BOOKMARK PAGE";
+            this.BoMarkBtn.UseVisualStyleBackColor = true;
+            this.BoMarkBtn.Click += new System.EventHandler(this.BoMarkBtn_Click);
+            // 
+            // ReportLbl
+            // 
+            this.ReportLbl.Font = new System.Drawing.Font("MS Reference Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ReportLbl.Location = new System.Drawing.Point(22, 36);
+            this.ReportLbl.Name = "ReportLbl";
+            this.ReportLbl.Size = new System.Drawing.Size(640, 39);
+            this.ReportLbl.TabIndex = 26;
+            this.ReportLbl.Text = "REPORT AND ANALYSIS";
             // 
             // Report
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.concertDataGridView);
-            this.Controls.Add(this.concertBindingNavigator);
+            this.ClientSize = new System.Drawing.Size(1482, 503);
+            this.Controls.Add(this.ReportLbl);
+            this.Controls.Add(this.BoMarkBtn);
+            this.Controls.Add(this.ReceiptBtn);
+            this.Controls.Add(this.ConManBtn);
+            this.Controls.Add(this.ReportChart);
+            this.Controls.Add(this.GenChartButton);
+            this.Controls.Add(this.SortDateBtn);
+            this.Controls.Add(this.SortTotTicBtn);
+            this.Controls.Add(this.SearchTbox);
+            this.Controls.Add(this.SearchBtn);
+            this.Controls.Add(this.bookingDataGridView);
+            this.Controls.Add(this.bookingBindingNavigator);
             this.Name = "Report";
             this.Text = "Report";
             this.Load += new System.EventHandler(this.Report_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ticket2U)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.concertBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.concertBindingNavigator)).EndInit();
-            this.concertBindingNavigator.ResumeLayout(false);
-            this.concertBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.concertDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookingBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookingBindingNavigator)).EndInit();
+            this.bookingBindingNavigator.ResumeLayout(false);
+            this.bookingBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bookingDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ReportChart)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -314,10 +443,10 @@
         #endregion
 
         private Ticket2U ticket2U;
-        private System.Windows.Forms.BindingSource concertBindingSource;
-        private Ticket2UTableAdapters.ConcertTableAdapter concertTableAdapter;
+        private System.Windows.Forms.BindingSource bookingBindingSource;
+        private Ticket2UTableAdapters.BookingTableAdapter bookingTableAdapter;
         private Ticket2UTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.BindingNavigator concertBindingNavigator;
+        private System.Windows.Forms.BindingNavigator bookingBindingNavigator;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
@@ -329,8 +458,8 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.ToolStripButton concertBindingNavigatorSaveItem;
-        private System.Windows.Forms.DataGridView concertDataGridView;
+        private System.Windows.Forms.ToolStripButton bookingBindingNavigatorSaveItem;
+        private System.Windows.Forms.DataGridView bookingDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
@@ -338,5 +467,15 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.Button SearchBtn;
+        private System.Windows.Forms.TextBox SearchTbox;
+        private System.Windows.Forms.Button SortTotTicBtn;
+        private System.Windows.Forms.Button SortDateBtn;
+        private System.Windows.Forms.Button GenChartButton;
+        private System.Windows.Forms.DataVisualization.Charting.Chart ReportChart;
+        private System.Windows.Forms.Button ConManBtn;
+        private System.Windows.Forms.Button ReceiptBtn;
+        private System.Windows.Forms.Button BoMarkBtn;
+        private System.Windows.Forms.Label ReportLbl;
     }
 }

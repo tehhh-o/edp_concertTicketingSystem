@@ -38,6 +38,8 @@
             this.statusLabel = new System.Windows.Forms.Label();
             this.concertBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.concertBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ticket2U = new projectEDPforreal.Ticket2U();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -50,6 +52,7 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.concertBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.ConIdTB = new System.Windows.Forms.TextBox();
+            this.bookingBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ConNameTB = new System.Windows.Forms.TextBox();
             this.ConDetailTB = new System.Windows.Forms.TextBox();
             this.DateDTP = new System.Windows.Forms.DateTimePicker();
@@ -69,27 +72,25 @@
             this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ticketpriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.availableseatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.concertBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ticket2U = new projectEDPforreal.Ticket2U();
-            this.bookingBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.concertTableAdapter = new projectEDPforreal.Ticket2UTableAdapters.ConcertTableAdapter();
             this.tableAdapterManager = new projectEDPforreal.Ticket2UTableAdapters.TableAdapterManager();
             this.bookingTableAdapter = new projectEDPforreal.Ticket2UTableAdapters.BookingTableAdapter();
             this.paymentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.paymentTableAdapter = new projectEDPforreal.Ticket2UTableAdapters.PaymentTableAdapter();
+            this.ConManLbl = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.concertBindingNavigator)).BeginInit();
             this.concertBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.concertDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.concertBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ticket2U)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookingBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.concertDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.paymentBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // booking_idLabel
             // 
             this.booking_idLabel.AutoSize = true;
-            this.booking_idLabel.Location = new System.Drawing.Point(1038, 44);
+            this.booking_idLabel.Location = new System.Drawing.Point(1071, 85);
             this.booking_idLabel.Name = "booking_idLabel";
             this.booking_idLabel.Size = new System.Drawing.Size(75, 16);
             this.booking_idLabel.TabIndex = 2;
@@ -98,7 +99,7 @@
             // user_idLabel
             // 
             this.user_idLabel.AutoSize = true;
-            this.user_idLabel.Location = new System.Drawing.Point(1038, 72);
+            this.user_idLabel.Location = new System.Drawing.Point(1071, 113);
             this.user_idLabel.Name = "user_idLabel";
             this.user_idLabel.Size = new System.Drawing.Size(99, 16);
             this.user_idLabel.TabIndex = 4;
@@ -107,7 +108,7 @@
             // concert_idLabel
             // 
             this.concert_idLabel.AutoSize = true;
-            this.concert_idLabel.Location = new System.Drawing.Point(1038, 100);
+            this.concert_idLabel.Location = new System.Drawing.Point(1071, 141);
             this.concert_idLabel.Name = "concert_idLabel";
             this.concert_idLabel.Size = new System.Drawing.Size(107, 16);
             this.concert_idLabel.TabIndex = 6;
@@ -116,7 +117,7 @@
             // booking_dateLabel
             // 
             this.booking_dateLabel.AutoSize = true;
-            this.booking_dateLabel.Location = new System.Drawing.Point(1038, 208);
+            this.booking_dateLabel.Location = new System.Drawing.Point(1071, 249);
             this.booking_dateLabel.Name = "booking_dateLabel";
             this.booking_dateLabel.Size = new System.Drawing.Size(42, 16);
             this.booking_dateLabel.TabIndex = 8;
@@ -125,7 +126,7 @@
             // total_ticketLabel
             // 
             this.total_ticketLabel.AutoSize = true;
-            this.total_ticketLabel.Location = new System.Drawing.Point(1038, 239);
+            this.total_ticketLabel.Location = new System.Drawing.Point(1071, 280);
             this.total_ticketLabel.Name = "total_ticketLabel";
             this.total_ticketLabel.Size = new System.Drawing.Size(122, 16);
             this.total_ticketLabel.TabIndex = 10;
@@ -134,7 +135,7 @@
             // total_priceLabel
             // 
             this.total_priceLabel.AutoSize = true;
-            this.total_priceLabel.Location = new System.Drawing.Point(1038, 267);
+            this.total_priceLabel.Location = new System.Drawing.Point(1071, 308);
             this.total_priceLabel.Name = "total_priceLabel";
             this.total_priceLabel.Size = new System.Drawing.Size(104, 16);
             this.total_priceLabel.TabIndex = 12;
@@ -143,7 +144,7 @@
             // statusLabel
             // 
             this.statusLabel.AutoSize = true;
-            this.statusLabel.Location = new System.Drawing.Point(1038, 335);
+            this.statusLabel.Location = new System.Drawing.Point(1071, 376);
             this.statusLabel.Name = "statusLabel";
             this.statusLabel.Size = new System.Drawing.Size(0, 16);
             this.statusLabel.TabIndex = 14;
@@ -175,7 +176,7 @@
             this.concertBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.concertBindingNavigator.Name = "concertBindingNavigator";
             this.concertBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.concertBindingNavigator.Size = new System.Drawing.Size(1426, 27);
+            this.concertBindingNavigator.Size = new System.Drawing.Size(1482, 27);
             this.concertBindingNavigator.TabIndex = 0;
             this.concertBindingNavigator.Text = "bindingNavigator1";
             this.concertBindingNavigator.RefreshItems += new System.EventHandler(this.concertBindingNavigator_RefreshItems);
@@ -187,6 +188,16 @@
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorAddNewItem.Text = "Add new";
+            // 
+            // concertBindingSource
+            // 
+            this.concertBindingSource.DataMember = "Concert";
+            this.concertBindingSource.DataSource = this.ticket2U;
+            // 
+            // ticket2U
+            // 
+            this.ticket2U.DataSetName = "Ticket2U";
+            this.ticket2U.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bindingNavigatorCountItem
             // 
@@ -228,6 +239,7 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 27);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -270,15 +282,20 @@
             // ConIdTB
             // 
             this.ConIdTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bookingBindingSource, "booking_id", true));
-            this.ConIdTB.Location = new System.Drawing.Point(1170, 44);
+            this.ConIdTB.Location = new System.Drawing.Point(1203, 85);
             this.ConIdTB.Name = "ConIdTB";
             this.ConIdTB.Size = new System.Drawing.Size(238, 22);
             this.ConIdTB.TabIndex = 3;
             // 
+            // bookingBindingSource
+            // 
+            this.bookingBindingSource.DataMember = "Booking";
+            this.bookingBindingSource.DataSource = this.ticket2U;
+            // 
             // ConNameTB
             // 
             this.ConNameTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bookingBindingSource, "user_id", true));
-            this.ConNameTB.Location = new System.Drawing.Point(1170, 72);
+            this.ConNameTB.Location = new System.Drawing.Point(1203, 113);
             this.ConNameTB.Name = "ConNameTB";
             this.ConNameTB.Size = new System.Drawing.Size(238, 22);
             this.ConNameTB.TabIndex = 5;
@@ -286,7 +303,7 @@
             // ConDetailTB
             // 
             this.ConDetailTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bookingBindingSource, "concert_id", true));
-            this.ConDetailTB.Location = new System.Drawing.Point(1170, 100);
+            this.ConDetailTB.Location = new System.Drawing.Point(1203, 141);
             this.ConDetailTB.Multiline = true;
             this.ConDetailTB.Name = "ConDetailTB";
             this.ConDetailTB.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
@@ -296,7 +313,7 @@
             // DateDTP
             // 
             this.DateDTP.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.bookingBindingSource, "booking_date", true));
-            this.DateDTP.Location = new System.Drawing.Point(1170, 208);
+            this.DateDTP.Location = new System.Drawing.Point(1203, 249);
             this.DateDTP.Name = "DateDTP";
             this.DateDTP.Size = new System.Drawing.Size(238, 22);
             this.DateDTP.TabIndex = 9;
@@ -304,7 +321,7 @@
             // TicPriceTB
             // 
             this.TicPriceTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bookingBindingSource, "total_ticket", true));
-            this.TicPriceTB.Location = new System.Drawing.Point(1170, 239);
+            this.TicPriceTB.Location = new System.Drawing.Point(1203, 280);
             this.TicPriceTB.Name = "TicPriceTB";
             this.TicPriceTB.Size = new System.Drawing.Size(238, 22);
             this.TicPriceTB.TabIndex = 11;
@@ -312,7 +329,7 @@
             // SeatTB
             // 
             this.SeatTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bookingBindingSource, "total_price", true));
-            this.SeatTB.Location = new System.Drawing.Point(1170, 267);
+            this.SeatTB.Location = new System.Drawing.Point(1203, 308);
             this.SeatTB.Name = "SeatTB";
             this.SeatTB.Size = new System.Drawing.Size(238, 22);
             this.SeatTB.TabIndex = 13;
@@ -321,7 +338,7 @@
             // 
             this.AddBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(185)))), ((int)(((byte)(129)))));
             this.AddBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.AddBtn.Location = new System.Drawing.Point(1041, 315);
+            this.AddBtn.Location = new System.Drawing.Point(1074, 356);
             this.AddBtn.Name = "AddBtn";
             this.AddBtn.Size = new System.Drawing.Size(90, 35);
             this.AddBtn.TabIndex = 16;
@@ -333,7 +350,7 @@
             // 
             this.UpdateBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(158)))), ((int)(((byte)(11)))));
             this.UpdateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.UpdateBtn.Location = new System.Drawing.Point(1183, 315);
+            this.UpdateBtn.Location = new System.Drawing.Point(1216, 356);
             this.UpdateBtn.Name = "UpdateBtn";
             this.UpdateBtn.Size = new System.Drawing.Size(90, 35);
             this.UpdateBtn.TabIndex = 17;
@@ -345,7 +362,7 @@
             // 
             this.DeleteBtn.BackColor = System.Drawing.Color.Olive;
             this.DeleteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.DeleteBtn.Location = new System.Drawing.Point(1319, 315);
+            this.DeleteBtn.Location = new System.Drawing.Point(1352, 356);
             this.DeleteBtn.Name = "DeleteBtn";
             this.DeleteBtn.Size = new System.Drawing.Size(90, 35);
             this.DeleteBtn.TabIndex = 18;
@@ -356,25 +373,27 @@
             // ClearBtn
             // 
             this.ClearBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.ClearBtn.Location = new System.Drawing.Point(1183, 371);
+            this.ClearBtn.Location = new System.Drawing.Point(1216, 412);
             this.ClearBtn.Name = "ClearBtn";
             this.ClearBtn.Size = new System.Drawing.Size(90, 35);
             this.ClearBtn.TabIndex = 19;
             this.ClearBtn.Text = "CLEAR";
             this.ClearBtn.UseVisualStyleBackColor = true;
+            this.ClearBtn.Click += new System.EventHandler(this.ClearBtn_Click);
             // 
             // ReportBtn
             // 
-            this.ReportBtn.Location = new System.Drawing.Point(27, 416);
+            this.ReportBtn.Location = new System.Drawing.Point(27, 457);
             this.ReportBtn.Name = "ReportBtn";
             this.ReportBtn.Size = new System.Drawing.Size(128, 35);
             this.ReportBtn.TabIndex = 20;
             this.ReportBtn.Text = "REPORT PAGE";
             this.ReportBtn.UseVisualStyleBackColor = true;
+            this.ReportBtn.Click += new System.EventHandler(this.ReportBtn_Click);
             // 
             // ReceiptBtn
             // 
-            this.ReceiptBtn.Location = new System.Drawing.Point(195, 416);
+            this.ReceiptBtn.Location = new System.Drawing.Point(195, 457);
             this.ReceiptBtn.Name = "ReceiptBtn";
             this.ReceiptBtn.Size = new System.Drawing.Size(128, 35);
             this.ReceiptBtn.TabIndex = 21;
@@ -383,7 +402,7 @@
             // 
             // BoMarkBtn
             // 
-            this.BoMarkBtn.Location = new System.Drawing.Point(360, 416);
+            this.BoMarkBtn.Location = new System.Drawing.Point(360, 457);
             this.BoMarkBtn.Name = "BoMarkBtn";
             this.BoMarkBtn.Size = new System.Drawing.Size(170, 35);
             this.BoMarkBtn.TabIndex = 22;
@@ -402,11 +421,11 @@
             this.ticketpriceDataGridViewTextBoxColumn,
             this.availableseatDataGridViewTextBoxColumn});
             this.concertDataGridView.DataSource = this.concertBindingSource;
-            this.concertDataGridView.Location = new System.Drawing.Point(6, 44);
+            this.concertDataGridView.Location = new System.Drawing.Point(6, 85);
             this.concertDataGridView.Name = "concertDataGridView";
             this.concertDataGridView.RowHeadersWidth = 51;
             this.concertDataGridView.RowTemplate.Height = 24;
-            this.concertDataGridView.Size = new System.Drawing.Size(1012, 356);
+            this.concertDataGridView.Size = new System.Drawing.Size(1012, 366);
             this.concertDataGridView.TabIndex = 24;
             // 
             // concertidDataGridViewTextBoxColumn
@@ -457,21 +476,6 @@
             this.availableseatDataGridViewTextBoxColumn.Name = "availableseatDataGridViewTextBoxColumn";
             this.availableseatDataGridViewTextBoxColumn.Width = 125;
             // 
-            // concertBindingSource
-            // 
-            this.concertBindingSource.DataMember = "Concert";
-            this.concertBindingSource.DataSource = this.ticket2U;
-            // 
-            // ticket2U
-            // 
-            this.ticket2U.DataSetName = "Ticket2U";
-            this.ticket2U.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // bookingBindingSource
-            // 
-            this.bookingBindingSource.DataMember = "Booking";
-            this.bookingBindingSource.DataSource = this.ticket2U;
-            // 
             // concertTableAdapter
             // 
             this.concertTableAdapter.ClearBeforeFill = true;
@@ -502,11 +506,21 @@
             // 
             this.paymentTableAdapter.ClearBeforeFill = true;
             // 
+            // ConManLbl
+            // 
+            this.ConManLbl.Font = new System.Drawing.Font("MS Reference Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ConManLbl.Location = new System.Drawing.Point(22, 36);
+            this.ConManLbl.Name = "ConManLbl";
+            this.ConManLbl.Size = new System.Drawing.Size(773, 39);
+            this.ConManLbl.TabIndex = 25;
+            this.ConManLbl.Text = "CONCERT MANAGEMENT";
+            // 
             // AdminMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1426, 471);
+            this.ClientSize = new System.Drawing.Size(1482, 503);
+            this.Controls.Add(this.ConManLbl);
             this.Controls.Add(this.concertDataGridView);
             this.Controls.Add(this.BoMarkBtn);
             this.Controls.Add(this.ReceiptBtn);
@@ -535,10 +549,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.concertBindingNavigator)).EndInit();
             this.concertBindingNavigator.ResumeLayout(false);
             this.concertBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.concertDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.concertBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ticket2U)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookingBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.concertDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.paymentBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -596,5 +610,6 @@
         private System.Windows.Forms.Label total_ticketLabel;
         private System.Windows.Forms.Label total_priceLabel;
         private System.Windows.Forms.Label statusLabel;
+        private System.Windows.Forms.Label ConManLbl;
     }
 }

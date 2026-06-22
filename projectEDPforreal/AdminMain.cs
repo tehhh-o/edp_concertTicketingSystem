@@ -94,5 +94,22 @@ namespace projectEDPforreal
             SeatTB.Text = "";
             MessageBox.Show("Data updated successfully");
         }
+
+        private void ClearBtn_Click(object sender, EventArgs e)
+        {
+            ConIdTB.Clear();
+            ConNameTB.Clear();
+            ConDetailTB.Clear();
+            DateDTP.Value = DateTime.Now;
+            TicPriceTB.Clear();
+            SeatTB.Clear();
+        }
+
+        private void ReportBtn_Click(object sender, EventArgs e)
+        {
+            Report report = new Report();
+            report.Show();
+            this.Hide();
+        }
     }
 }
