@@ -63,7 +63,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-   <Compile Include="AdminMain.cs">
+    <Compile Include="AdminMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AdminMain.Designer.cs">

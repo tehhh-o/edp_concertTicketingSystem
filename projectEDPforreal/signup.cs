@@ -83,8 +83,6 @@ namespace projectEDPforreal
                 MessageBox.Show("Sign up successful!", "", MessageBoxButtons.OK, MessageBoxIcon.Information) ;
 
                 this.Hide();
-                Login Log = new Login();
-                Log.ShowDialog();
                 this.Close();
 
             }
@@ -124,8 +122,6 @@ namespace projectEDPforreal
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Login Log = new Login();
-            Log.ShowDialog();
             this.Close();
         }
     }

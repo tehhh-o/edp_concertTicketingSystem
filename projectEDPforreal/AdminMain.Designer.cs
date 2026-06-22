@@ -575,7 +575,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn concertidDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn concertnameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn concertdetailsDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn venueDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ticketpriceDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn availableseatDataGridViewTextBoxColumn;
