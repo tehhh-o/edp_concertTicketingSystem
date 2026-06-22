@@ -40,30 +40,29 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 17.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(9, 7);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(133, 29);
+            this.label1.Size = new System.Drawing.Size(158, 33);
             this.label1.TabIndex = 1;
             this.label1.Text = "Ticket2Go";
             // 
             // searchbox
             // 
             this.searchbox.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.searchbox.Location = new System.Drawing.Point(224, 51);
-            this.searchbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.searchbox.Location = new System.Drawing.Point(299, 63);
+            this.searchbox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.searchbox.Multiline = true;
             this.searchbox.Name = "searchbox";
-            this.searchbox.Size = new System.Drawing.Size(302, 31);
+            this.searchbox.Size = new System.Drawing.Size(401, 37);
             this.searchbox.TabIndex = 31;
             // 
             // search_button
             // 
             this.search_button.BackColor = System.Drawing.Color.LightBlue;
-            this.search_button.Location = new System.Drawing.Point(130, 51);
-            this.search_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.search_button.Location = new System.Drawing.Point(173, 63);
+            this.search_button.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.search_button.Name = "search_button";
-            this.search_button.Size = new System.Drawing.Size(76, 30);
+            this.search_button.Size = new System.Drawing.Size(101, 37);
             this.search_button.TabIndex = 32;
             this.search_button.Text = "Search Event";
             this.search_button.UseVisualStyleBackColor = false;
@@ -71,27 +70,27 @@
             // 
             // grpResults
             // 
-            this.grpResults.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.grpResults.Location = new System.Drawing.Point(84, 98);
-            this.grpResults.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grpResults.BackColor = System.Drawing.Color.LightBlue;
+            this.grpResults.Location = new System.Drawing.Point(135, 104);
+            this.grpResults.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grpResults.Name = "grpResults";
-            this.grpResults.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.grpResults.Size = new System.Drawing.Size(515, 367);
+            this.grpResults.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.grpResults.Size = new System.Drawing.Size(687, 452);
             this.grpResults.TabIndex = 33;
             this.grpResults.TabStop = false;
             this.grpResults.Text = "Concert Details";
             // 
             // eventbrowser
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(754, 474);
+            this.ClientSize = new System.Drawing.Size(1005, 583);
             this.Controls.Add(this.grpResults);
             this.Controls.Add(this.search_button);
             this.Controls.Add(this.searchbox);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "eventbrowser";
             this.Text = "eventbrowser";
             this.ResumeLayout(false);
