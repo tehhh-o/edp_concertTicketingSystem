@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Report));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.ticket2U = new projectEDPforreal.Ticket2U();
             this.bookingBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bookingTableAdapter = new projectEDPforreal.Ticket2UTableAdapters.BookingTableAdapter();
@@ -128,7 +128,7 @@
             this.bookingBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bookingBindingNavigator.Name = "bookingBindingNavigator";
             this.bookingBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.bookingBindingNavigator.Size = new System.Drawing.Size(1482, 31);
+            this.bookingBindingNavigator.Size = new System.Drawing.Size(1112, 27);
             this.bookingBindingNavigator.TabIndex = 0;
             this.bookingBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -138,13 +138,13 @@
             this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(24, 24);
             this.bindingNavigatorAddNewItem.Text = "Add new";
             // 
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 28);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 24);
             this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
@@ -154,7 +154,7 @@
             this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
             this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(24, 24);
             this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
             // bindingNavigatorMoveFirstItem
@@ -163,7 +163,7 @@
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(24, 24);
             this.bindingNavigatorMoveFirstItem.Text = "Move first";
             // 
             // bindingNavigatorMovePreviousItem
@@ -172,28 +172,27 @@
             this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(24, 24);
             this.bindingNavigatorMovePreviousItem.Text = "Move previous";
             // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 31);
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 27);
             // 
             // bindingNavigatorPositionItem
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 27);
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(38, 23);
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
             // bindingNavigatorSeparator1
             // 
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 31);
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 27);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -201,7 +200,7 @@
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(24, 24);
             this.bindingNavigatorMoveNextItem.Text = "Move next";
             // 
             // bindingNavigatorMoveLastItem
@@ -210,20 +209,20 @@
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(24, 24);
             this.bindingNavigatorMoveLastItem.Text = "Move last";
             // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 31);
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
             // bookingBindingNavigatorSaveItem
             // 
             this.bookingBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.bookingBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("bookingBindingNavigatorSaveItem.Image")));
             this.bookingBindingNavigatorSaveItem.Name = "bookingBindingNavigatorSaveItem";
-            this.bookingBindingNavigatorSaveItem.Size = new System.Drawing.Size(29, 28);
+            this.bookingBindingNavigatorSaveItem.Size = new System.Drawing.Size(24, 24);
             this.bookingBindingNavigatorSaveItem.Text = "Save Data";
             this.bookingBindingNavigatorSaveItem.Click += new System.EventHandler(this.bookingBindingNavigatorSaveItem_Click);
             // 
@@ -240,11 +239,12 @@
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn7});
             this.bookingDataGridView.DataSource = this.bookingBindingSource;
-            this.bookingDataGridView.Location = new System.Drawing.Point(12, 117);
+            this.bookingDataGridView.Location = new System.Drawing.Point(9, 95);
+            this.bookingDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bookingDataGridView.Name = "bookingDataGridView";
             this.bookingDataGridView.RowHeadersWidth = 51;
             this.bookingDataGridView.RowTemplate.Height = 24;
-            this.bookingDataGridView.Size = new System.Drawing.Size(920, 287);
+            this.bookingDataGridView.Size = new System.Drawing.Size(690, 233);
             this.bookingDataGridView.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn1
@@ -305,9 +305,10 @@
             // 
             // SearchBtn
             // 
-            this.SearchBtn.Location = new System.Drawing.Point(297, 76);
+            this.SearchBtn.Location = new System.Drawing.Point(223, 62);
+            this.SearchBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.SearchBtn.Name = "SearchBtn";
-            this.SearchBtn.Size = new System.Drawing.Size(90, 35);
+            this.SearchBtn.Size = new System.Drawing.Size(68, 28);
             this.SearchBtn.TabIndex = 2;
             this.SearchBtn.Text = "SEARCH";
             this.SearchBtn.UseVisualStyleBackColor = true;
@@ -315,17 +316,19 @@
             // 
             // SearchTbox
             // 
-            this.SearchTbox.Location = new System.Drawing.Point(28, 82);
+            this.SearchTbox.Location = new System.Drawing.Point(21, 67);
+            this.SearchTbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.SearchTbox.Multiline = true;
             this.SearchTbox.Name = "SearchTbox";
-            this.SearchTbox.Size = new System.Drawing.Size(255, 24);
+            this.SearchTbox.Size = new System.Drawing.Size(192, 20);
             this.SearchTbox.TabIndex = 3;
             // 
             // SortTotTicBtn
             // 
-            this.SortTotTicBtn.Location = new System.Drawing.Point(439, 76);
+            this.SortTotTicBtn.Location = new System.Drawing.Point(329, 62);
+            this.SortTotTicBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.SortTotTicBtn.Name = "SortTotTicBtn";
-            this.SortTotTicBtn.Size = new System.Drawing.Size(223, 35);
+            this.SortTotTicBtn.Size = new System.Drawing.Size(167, 28);
             this.SortTotTicBtn.TabIndex = 4;
             this.SortTotTicBtn.Text = "SORT BY TOTAL TICKET";
             this.SortTotTicBtn.UseVisualStyleBackColor = true;
@@ -333,9 +336,10 @@
             // 
             // SortDateBtn
             // 
-            this.SortDateBtn.Location = new System.Drawing.Point(715, 76);
+            this.SortDateBtn.Location = new System.Drawing.Point(536, 62);
+            this.SortDateBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.SortDateBtn.Name = "SortDateBtn";
-            this.SortDateBtn.Size = new System.Drawing.Size(187, 35);
+            this.SortDateBtn.Size = new System.Drawing.Size(140, 28);
             this.SortDateBtn.TabIndex = 5;
             this.SortDateBtn.Text = "SORT BY DATE";
             this.SortDateBtn.UseVisualStyleBackColor = true;
@@ -343,9 +347,10 @@
             // 
             // GenChartButton
             // 
-            this.GenChartButton.Location = new System.Drawing.Point(745, 410);
+            this.GenChartButton.Location = new System.Drawing.Point(559, 333);
+            this.GenChartButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.GenChartButton.Name = "GenChartButton";
-            this.GenChartButton.Size = new System.Drawing.Size(187, 35);
+            this.GenChartButton.Size = new System.Drawing.Size(140, 28);
             this.GenChartButton.TabIndex = 6;
             this.GenChartButton.Text = "GENERATE CHART";
             this.GenChartButton.UseVisualStyleBackColor = true;
@@ -353,25 +358,28 @@
             // 
             // ReportChart
             // 
-            chartArea1.Name = "ChartArea1";
-            this.ReportChart.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.ReportChart.Legends.Add(legend1);
-            this.ReportChart.Location = new System.Drawing.Point(949, 76);
+            this.ReportChart.BackColor = System.Drawing.Color.Transparent;
+            chartArea2.Name = "ChartArea1";
+            this.ReportChart.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.ReportChart.Legends.Add(legend2);
+            this.ReportChart.Location = new System.Drawing.Point(721, 41);
+            this.ReportChart.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ReportChart.Name = "ReportChart";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.ReportChart.Series.Add(series1);
-            this.ReportChart.Size = new System.Drawing.Size(507, 416);
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.ReportChart.Series.Add(series2);
+            this.ReportChart.Size = new System.Drawing.Size(380, 338);
             this.ReportChart.TabIndex = 7;
             this.ReportChart.Text = "chart1";
             // 
             // ConManBtn
             // 
-            this.ConManBtn.Location = new System.Drawing.Point(28, 457);
+            this.ConManBtn.Location = new System.Drawing.Point(21, 371);
+            this.ConManBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ConManBtn.Name = "ConManBtn";
-            this.ConManBtn.Size = new System.Drawing.Size(255, 35);
+            this.ConManBtn.Size = new System.Drawing.Size(191, 28);
             this.ConManBtn.TabIndex = 21;
             this.ConManBtn.Text = "CONCERT MANAGEMENT PAGE";
             this.ConManBtn.UseVisualStyleBackColor = true;
@@ -379,18 +387,21 @@
             // 
             // ReportLbl
             // 
-            this.ReportLbl.Font = new System.Drawing.Font("MS Reference Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ReportLbl.Location = new System.Drawing.Point(22, 36);
+            this.ReportLbl.BackColor = System.Drawing.Color.Transparent;
+            this.ReportLbl.Font = new System.Drawing.Font("MS Reference Sans Serif", 17.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ReportLbl.Location = new System.Drawing.Point(16, 29);
+            this.ReportLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ReportLbl.Name = "ReportLbl";
-            this.ReportLbl.Size = new System.Drawing.Size(640, 39);
+            this.ReportLbl.Size = new System.Drawing.Size(480, 32);
             this.ReportLbl.TabIndex = 26;
             this.ReportLbl.Text = "REPORT AND ANALYSIS";
             // 
             // Report
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1482, 503);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(1112, 409);
             this.Controls.Add(this.ReportLbl);
             this.Controls.Add(this.ConManBtn);
             this.Controls.Add(this.ReportChart);
@@ -401,6 +412,7 @@
             this.Controls.Add(this.SearchBtn);
             this.Controls.Add(this.bookingDataGridView);
             this.Controls.Add(this.bookingBindingNavigator);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Report";
             this.Text = "Report";
             this.Load += new System.EventHandler(this.Report_Load);

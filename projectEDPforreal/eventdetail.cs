@@ -31,7 +31,7 @@ namespace projectEDPforreal
         {
             string connectionString =
         @"Data Source=(LocalDB)\MSSQLLocalDB;
-        AttachDbFilename=C:\Users\user\source\repos\edp_concertTicketingSystem\projectEDPforreal\Ticket2U.mdf;
+        AttachDbFilename=|DataDirectory|\Ticket2U.mdf.mdf;
         Integrated Security=True";
 
             string query =
@@ -125,6 +125,11 @@ namespace projectEDPforreal
             Form1 form1 = new Form1();
             this.Hide();
             form1.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

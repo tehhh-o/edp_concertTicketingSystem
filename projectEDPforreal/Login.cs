@@ -16,7 +16,7 @@ namespace projectEDPforreal
     {
         SqlConnection con = new SqlConnection(
       @"Data Source=(LocalDB)\MSSQLLocalDB;
-      AttachDbFilename=C:\Users\user\source\repos\edp_concertTicketingSystem\projectEDPforreal\Ticket2U.mdf;
+      AttachDbFilename=|DataDirectory|\Ticket2U.mdf;
       Integrated Security=True");
         public Login()
         {
@@ -30,7 +30,7 @@ namespace projectEDPforreal
             {
                 using (SqlConnection con = new SqlConnection(
                     @"Data Source=(LocalDB)\MSSQLLocalDB;
-              AttachDbFilename=C:\Users\user\source\repos\edp_concertTicketingSystem\projectEDPforreal\Ticket2U.mdf;
+              AttachDbFilename=|DataDirectory|\Ticket2U.mdf;
               Integrated Security=True"))
                 {
                     con.Open();
@@ -78,6 +78,11 @@ namespace projectEDPforreal
         }
 
         private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Login_Load(object sender, EventArgs e)
         {
 
         }

@@ -31,5 +31,20 @@ namespace projectEDPforreal
         {
 
         }
+
+        private void checkout_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label15_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

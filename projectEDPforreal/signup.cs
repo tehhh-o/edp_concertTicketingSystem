@@ -16,7 +16,7 @@ namespace projectEDPforreal
     {
         SqlConnection con = new SqlConnection(
     @"Data Source=(LocalDB)\MSSQLLocalDB;
-      AttachDbFilename=C:\Users\user\source\repos\edp_concertTicketingSystem\projectEDPforreal\Ticket2U.mdf;
+      AttachDbFilename=|DataDirectory|\Ticket2U.mdf;
       Integrated Security=True");
 
         public signup()
@@ -56,7 +56,7 @@ namespace projectEDPforreal
             {
                 using (SqlConnection con = new SqlConnection(
                     @"Data Source=(LocalDB)\MSSQLLocalDB;
-      AttachDbFilename=C:\Users\user\source\repos\edp_concertTicketingSystem\projectEDPforreal\Ticket2U.mdf;
+      AttachDbFilename=|DataDirectory|\Ticket2U.mdf;
       Integrated Security=True"))
                 {
                     con.Open();
