@@ -24,17 +24,25 @@ namespace projectEDPforreal
 
         private void signupBtn_Click(object sender, EventArgs e)
         {
-            signup form2 = new signup();
-            form2.Show();
             this.Hide();
+            signup Signup = new signup();
+            Signup.ShowDialog();
+            this.Close();
         }
 
         private void loginBtn_Click(object sender, EventArgs e)
         {
-            signup form2 = new signup();
+            this.Hide();
+            Login Log = new Login();
+            Log.ShowDialog();
+            this.Close();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            eventbrowser form2 = new eventbrowser();
             form2.Show();
             this.Hide();
-//jangankan gunung furqan gunung aqil pun aku tahan
         }
     }
 }
