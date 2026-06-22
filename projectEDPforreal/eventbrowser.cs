@@ -13,6 +13,14 @@ namespace projectEDPforreal
 {
     public partial class eventbrowser : Form
     {
+        private List<Image> eventImages = new List<Image>
+    {
+        Properties.Resources.OIP_4,
+        Properties.Resources.OIP_5,
+        Properties.Resources.OIP_7,
+        Properties.Resources.OIP_8,
+        Properties.Resources.OIP_9
+    };
         public eventbrowser()
         {
             InitializeComponent();
@@ -69,7 +77,7 @@ namespace projectEDPforreal
         {
             Button clickedButton = (Button)sender;
             int concertID = Convert.ToInt32(clickedButton.Tag);
-            eventdetail form = new eventdetail(concertID);
+            eventdetail form = new eventdetail(concertID, eventImages[(concertID - 1)]);
             form.Show();
             this.Hide();
         }

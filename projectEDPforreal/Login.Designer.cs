@@ -64,6 +64,7 @@
             this.groupBox2.Size = new System.Drawing.Size(502, 412);
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // button6
             // 
@@ -71,7 +72,7 @@
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(171, 52);
             this.button6.TabIndex = 10;
-            this.button6.Text = "SignUp";
+            this.button6.Text = "Sign Up";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
@@ -81,7 +82,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(171, 52);
             this.button2.TabIndex = 7;
-            this.button2.Text = "Login";
+            this.button2.Text = "Confirm";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -91,9 +92,9 @@
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(196, 35);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(90, 38);
+            this.label7.Size = new System.Drawing.Size(101, 38);
             this.label7.TabIndex = 0;
-            this.label7.Text = "login";
+            this.label7.Text = "Login";
             // 
             // txtLoginPassword
             // 
@@ -133,7 +134,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(741, 658);
             this.Controls.Add(this.loginPanel);
             this.Name = "Login";

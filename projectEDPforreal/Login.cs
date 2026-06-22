@@ -77,5 +77,9 @@ namespace projectEDPforreal
             this.Close();
         }
 
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

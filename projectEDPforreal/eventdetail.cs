@@ -14,15 +14,13 @@ namespace projectEDPforreal
     public partial class eventdetail : Form
     {
         int concertID;
-        public eventdetail()
-        {
-            InitializeComponent();
-        }
+        Image concertImage;
 
-        public eventdetail(int id)
+        public eventdetail(int id, Image img)
         {
             InitializeComponent();
             concertID = id;
+            concertImage = img;
         }
         private void eventdetail_Load(object sender, EventArgs e)
         {
@@ -32,13 +30,14 @@ namespace projectEDPforreal
         private void LoadConcertData()
         {
             string connectionString =
-                @"Data Source=(LocalDB)\MSSQLLocalDB;
-        AttachDbFilename=|DataDirectory|\Ticket2U.mdf;
+        @"Data Source=(LocalDB)\MSSQLLocalDB;
+        AttachDbFilename=C:\Users\user\source\repos\edp_concertTicketingSystem\projectEDPforreal\Ticket2U.mdf;
         Integrated Security=True";
 
             string query =
                 "SELECT concert_name, concert_details, date " +
                 "FROM Concert WHERE concert_id = @id";
+
 
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
@@ -58,6 +57,7 @@ namespace projectEDPforreal
                     lblDate.Text = date.ToString("dd MMM yyyy");
                 }
             }
+            eventPicBox.Image = concertImage;
         }
 
         private void LoadAvailableSeats()
@@ -118,6 +118,13 @@ namespace projectEDPforreal
         private void rowC_CheckedChanged(object sender, EventArgs e)
         {
             LoadAvailableSeats();
+        }
+
+        private void btn_back_Click(object sender, EventArgs e)
+        {
+            Form1 form1 = new Form1();
+            this.Hide();
+            form1.ShowDialog();
         }
     }
 }

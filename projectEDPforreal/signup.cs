@@ -121,8 +121,15 @@ namespace projectEDPforreal
 
         private void button2_Click(object sender, EventArgs e)
         {
+
+            Login login = new Login();
             this.Hide();
-            this.Close();
+            login.ShowDialog();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
     

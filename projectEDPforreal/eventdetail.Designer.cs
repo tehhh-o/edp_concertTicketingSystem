@@ -33,16 +33,17 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblDate = new System.Windows.Forms.Label();
             this.lblLocation = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.eventPicBox = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.rowA = new System.Windows.Forms.CheckBox();
-            this.rowB = new System.Windows.Forms.CheckBox();
-            this.rowC = new System.Windows.Forms.CheckBox();
-            this.lstSeats = new System.Windows.Forms.ListBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.lstSeats = new System.Windows.Forms.ListBox();
+            this.rowC = new System.Windows.Forms.CheckBox();
+            this.rowB = new System.Windows.Forms.CheckBox();
+            this.rowA = new System.Windows.Forms.CheckBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.btn_back = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eventPicBox)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,7 +70,7 @@
             // 
             this.groupBox1.Controls.Add(this.lblDate);
             this.groupBox1.Controls.Add(this.lblLocation);
-            this.groupBox1.Controls.Add(this.pictureBox1);
+            this.groupBox1.Controls.Add(this.eventPicBox);
             this.groupBox1.Controls.Add(this.lblName);
             this.groupBox1.Location = new System.Drawing.Point(145, 67);
             this.groupBox1.Name = "groupBox1";
@@ -96,13 +97,13 @@
             this.lblLocation.TabIndex = 6;
             this.lblLocation.Text = "event details";
             // 
-            // pictureBox1
+            // eventPicBox
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(13, 31);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(231, 157);
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
+            this.eventPicBox.Location = new System.Drawing.Point(13, 31);
+            this.eventPicBox.Name = "eventPicBox";
+            this.eventPicBox.Size = new System.Drawing.Size(231, 157);
+            this.eventPicBox.TabIndex = 5;
+            this.eventPicBox.TabStop = false;
             // 
             // groupBox2
             // 
@@ -119,36 +120,24 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "seat selection";
             // 
-            // label9
+            // button1
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(24, 33);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(107, 16);
-            this.label9.TabIndex = 14;
-            this.label9.Text = "Choose your row";
+            this.button1.Location = new System.Drawing.Point(545, 159);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(180, 70);
+            this.button1.TabIndex = 19;
+            this.button1.Text = "Checkout Button";
+            this.button1.UseVisualStyleBackColor = true;
             // 
-            // rowA
+            // lstSeats
             // 
-            this.rowA.AutoSize = true;
-            this.rowA.Location = new System.Drawing.Point(89, 70);
-            this.rowA.Name = "rowA";
-            this.rowA.Size = new System.Drawing.Size(68, 20);
-            this.rowA.TabIndex = 15;
-            this.rowA.Text = "Row A";
-            this.rowA.UseVisualStyleBackColor = true;
-            this.rowA.CheckedChanged += new System.EventHandler(this.rowA_CheckedChanged);
-            // 
-            // rowB
-            // 
-            this.rowB.AutoSize = true;
-            this.rowB.Location = new System.Drawing.Point(219, 69);
-            this.rowB.Name = "rowB";
-            this.rowB.Size = new System.Drawing.Size(68, 20);
-            this.rowB.TabIndex = 16;
-            this.rowB.Text = "Row B";
-            this.rowB.UseVisualStyleBackColor = true;
-            this.rowB.CheckedChanged += new System.EventHandler(this.rowB_CheckedChanged);
+            this.lstSeats.FormattingEnabled = true;
+            this.lstSeats.ItemHeight = 16;
+            this.lstSeats.Location = new System.Drawing.Point(42, 107);
+            this.lstSeats.Name = "lstSeats";
+            this.lstSeats.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
+            this.lstSeats.Size = new System.Drawing.Size(448, 196);
+            this.lstSeats.TabIndex = 18;
             // 
             // rowC
             // 
@@ -161,30 +150,54 @@
             this.rowC.UseVisualStyleBackColor = true;
             this.rowC.CheckedChanged += new System.EventHandler(this.rowC_CheckedChanged);
             // 
-            // lstSeats
+            // rowB
             // 
-            this.lstSeats.FormattingEnabled = true;
-            this.lstSeats.ItemHeight = 16;
-            this.lstSeats.Location = new System.Drawing.Point(42, 107);
-            this.lstSeats.Name = "lstSeats";
-            this.lstSeats.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
-            this.lstSeats.Size = new System.Drawing.Size(448, 196);
-            this.lstSeats.TabIndex = 18;
+            this.rowB.AutoSize = true;
+            this.rowB.Location = new System.Drawing.Point(219, 69);
+            this.rowB.Name = "rowB";
+            this.rowB.Size = new System.Drawing.Size(68, 20);
+            this.rowB.TabIndex = 16;
+            this.rowB.Text = "Row B";
+            this.rowB.UseVisualStyleBackColor = true;
+            this.rowB.CheckedChanged += new System.EventHandler(this.rowB_CheckedChanged);
             // 
-            // button1
+            // rowA
             // 
-            this.button1.Location = new System.Drawing.Point(545, 159);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(180, 70);
-            this.button1.TabIndex = 19;
-            this.button1.Text = "Checkout Button";
-            this.button1.UseVisualStyleBackColor = true;
+            this.rowA.AutoSize = true;
+            this.rowA.Location = new System.Drawing.Point(89, 70);
+            this.rowA.Name = "rowA";
+            this.rowA.Size = new System.Drawing.Size(68, 20);
+            this.rowA.TabIndex = 15;
+            this.rowA.Text = "Row A";
+            this.rowA.UseVisualStyleBackColor = true;
+            this.rowA.CheckedChanged += new System.EventHandler(this.rowA_CheckedChanged);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(24, 33);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(107, 16);
+            this.label9.TabIndex = 14;
+            this.label9.Text = "Choose your row";
+            // 
+            // btn_back
+            // 
+            this.btn_back.Location = new System.Drawing.Point(962, 633);
+            this.btn_back.Name = "btn_back";
+            this.btn_back.Size = new System.Drawing.Size(126, 40);
+            this.btn_back.TabIndex = 20;
+            this.btn_back.Text = "Back To Home";
+            this.btn_back.UseVisualStyleBackColor = true;
+            this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
             // 
             // eventdetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1100, 685);
+            this.Controls.Add(this.btn_back);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
@@ -193,7 +206,7 @@
             this.Load += new System.EventHandler(this.eventdetail_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eventPicBox)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
@@ -208,7 +221,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label lblDate;
         private System.Windows.Forms.Label lblLocation;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox eventPicBox;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.CheckBox rowC;
@@ -216,5 +229,6 @@
         private System.Windows.Forms.CheckBox rowA;
         private System.Windows.Forms.ListBox lstSeats;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_back;
     }
 }
