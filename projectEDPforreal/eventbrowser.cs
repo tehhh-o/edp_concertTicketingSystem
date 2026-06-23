@@ -13,6 +13,7 @@ namespace projectEDPforreal
 {
     public partial class eventbrowser : Form
     {
+        int userId;
         private List<Image> eventImages = new List<Image>
     {
         Properties.Resources.OIP_4,
@@ -21,9 +22,10 @@ namespace projectEDPforreal
         Properties.Resources.OIP_8,
         Properties.Resources.OIP_9
     };
-        public eventbrowser()
+        public eventbrowser(int userId)
         {
             InitializeComponent();
+            this.userId = userId;
         }
 
         private void search_button_Click(object sender, EventArgs e)
@@ -77,7 +79,7 @@ namespace projectEDPforreal
         {
             Button clickedButton = (Button)sender;
             int concertID = Convert.ToInt32(clickedButton.Tag);
-            eventdetail form = new eventdetail(concertID, eventImages[(concertID - 1)]);
+            eventdetail form = new eventdetail(concertID, eventImages[(concertID - 1)], userId);
             form.Show();
             this.Hide();
         }

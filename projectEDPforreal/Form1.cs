@@ -13,6 +13,7 @@ namespace projectEDPforreal
     public partial class Form1 : Form
 
     {
+        int userId;
         private int currentIndex = 0;
 
         private List<Image> eventImages = new List<Image>
@@ -27,10 +28,10 @@ namespace projectEDPforreal
         Properties.Resources.OIP_12,
         Properties.Resources.OIP_13
     };
-        public Form1()
+        public Form1(int userId)
         {
             InitializeComponent();
-
+            this.userId = userId;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -54,7 +55,7 @@ namespace projectEDPforreal
 
         private void button4_Click(object sender, EventArgs e)
         {
-            eventbrowser form2 = new eventbrowser();
+            eventbrowser form2 = new eventbrowser(userId);
             this.Hide();
             form2.ShowDialog();
         }
@@ -83,65 +84,74 @@ namespace projectEDPforreal
 
         private void button1_Click(object sender, EventArgs e)
         {
-            eventdetail detailForm = new eventdetail(1, eventImages[0]);
+            eventdetail detailForm = new eventdetail(1, eventImages[0], userId);
             this.Hide();
             detailForm.ShowDialog();
+            this.Close();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            eventdetail detailForm = new eventdetail(2, eventImages[1]);
+            eventdetail detailForm = new eventdetail(2, eventImages[1], userId);
             this.Hide();
             detailForm.ShowDialog();
+            this.Close();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            eventdetail detailForm = new eventdetail(3, eventImages[2]);
+            eventdetail detailForm = new eventdetail(3, eventImages[2], userId);
             this.Hide();
             detailForm.ShowDialog();
+            this.Close();
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-            eventdetail detailForm = new eventdetail(4, eventImages[3]);
+            eventdetail detailForm = new eventdetail(4, eventImages[3], userId);
             this.Hide();
             detailForm.ShowDialog();
+            this.Close();
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
-            eventdetail detailForm = new eventdetail(5, eventImages[4]);
+            eventdetail detailForm = new eventdetail(5, eventImages[4], userId);
             this.Hide();
             detailForm.ShowDialog();
+            this.Close();
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
-            eventdetail detailForm = new eventdetail(6, eventImages[5]);
+            eventdetail detailForm = new eventdetail(6, eventImages[5], userId);
             this.Hide();
             detailForm.ShowDialog();
+            this.Close();
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
-            eventdetail detailForm = new eventdetail(7, eventImages[6]);
+            eventdetail detailForm = new eventdetail(7, eventImages[6], userId);
             this.Hide();
             detailForm.ShowDialog();
+            this.Close();
         }
 
         private void button11_Click(object sender, EventArgs e)
         {
-            eventdetail detailForm = new eventdetail(8, eventImages[7]);
+            eventdetail detailForm = new eventdetail(8, eventImages[7], userId);
             this.Hide();
             detailForm.ShowDialog();
+            this.Close();
         }
 
         private void button12_Click(object sender, EventArgs e)
         {
-            eventdetail detailForm = new eventdetail(9, eventImages[8]);
+            eventdetail detailForm = new eventdetail(9, eventImages[8], userId);
             this.Hide();
             detailForm.ShowDialog();
+            this.Close();
         }
     }
 }
