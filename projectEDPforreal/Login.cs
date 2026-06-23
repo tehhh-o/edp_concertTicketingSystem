@@ -35,7 +35,7 @@ namespace projectEDPforreal
                 {
                     con.Open();
 
-                    string query = "SELECT COUNT(*) FROM [User] WHERE (name = @username OR email = @username) AND password = @password";
+                    string query = "SELECT user_id FROM [User] WHERE (name = @username OR email = @username) AND password = @password";
 
                     using (SqlCommand cmd = new SqlCommand(query, con))
                     {
@@ -43,14 +43,15 @@ namespace projectEDPforreal
                         cmd.Parameters.AddWithValue("@username", txtLoginEmail.Text.Trim());
                         cmd.Parameters.AddWithValue("@password", txtLoginPassword.Text.Trim());
 
-                        int userCount = Convert.ToInt32(cmd.ExecuteScalar());
+                        object result = cmd.ExecuteScalar();
 
-                        if (userCount > 0)
+                        if (result != null)
                         {
+                            int userId = Convert.ToInt32(result);
                             MessageBox.Show("Log In Successful!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                             this.Hide();
-                            Form1 main = new Form1();
+                            Form1 main = new Form1(userId);
                             main.ShowDialog();
                             this.Close();
 

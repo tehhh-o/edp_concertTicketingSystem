@@ -8,19 +8,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace projectEDPforreal
 {
     public partial class eventdetail : Form
     {
+        int userId;
         int concertID;
         Image concertImage;
 
-        public eventdetail(int id, Image img)
+        public eventdetail(int id, Image img, int userId)
         {
             InitializeComponent();
             concertID = id;
             concertImage = img;
+            this.userId = userId;
         }
         private void eventdetail_Load(object sender, EventArgs e)
         {
@@ -30,9 +33,9 @@ namespace projectEDPforreal
         private void LoadConcertData()
         {
             string connectionString =
-        @"Data Source=(LocalDB)\MSSQLLocalDB;
-        AttachDbFilename=|DataDirectory|\Ticket2U.mdf.mdf;
-        Integrated Security=True";
+                @"Data Source=(LocalDB)\MSSQLLocalDB;
+                AttachDbFilename=|DataDirectory|\Ticket2U.mdf;
+                Integrated Security=True";
 
             string query =
                 "SELECT concert_name, concert_details, date " +
@@ -59,7 +62,7 @@ namespace projectEDPforreal
             }
             eventPicBox.Image = concertImage;
         }
-
+       
         private void LoadAvailableSeats()
         {
             lstSeats.Items.Clear();
@@ -87,12 +90,16 @@ namespace projectEDPforreal
         private void LoadSeats(SqlConnection conn, string prefix)
         {
             string query =
-                "SELECT seat_number FROM Seat " +
-                "WHERE seat_number LIKE @prefix " +
-                "AND seat_status = 'Available'";
+                "SELECT s.seat_number " +
+                "FROM Seat s " +
+                "INNER JOIN TicketType tt ON s.ticket_type_id = tt.ticket_type_id " +
+                "WHERE tt.concert_id = @concert_id " +
+                "AND tt.type_name LIKE @prefix " +
+                "AND s.seat_status = 'Available'";
 
             SqlCommand cmd = new SqlCommand(query, conn);
 
+            cmd.Parameters.AddWithValue("@concert_id", concertID);
             cmd.Parameters.AddWithValue("@prefix", prefix + "%");
 
             SqlDataReader reader = cmd.ExecuteReader();
@@ -122,14 +129,30 @@ namespace projectEDPforreal
 
         private void btn_back_Click(object sender, EventArgs e)
         {
-            Form1 form1 = new Form1();
+            Form1 form1 = new Form1(userId);
             this.Hide();
             form1.ShowDialog();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (lstSeats.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("Please select at least one seat before proceeding.",
+                    "No Seat Selected", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
+            List<string> selectedSeats = new List<string>();
+            foreach (var item in lstSeats.SelectedItems)
+            {
+                selectedSeats.Add(item.ToString());
+            }
+
+            checkout checkoutForm = new checkout(concertID, selectedSeats, userId);
+            this.Hide();
+            checkoutForm.ShowDialog();
+            this.Close();
         }
     }
 }
