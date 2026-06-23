@@ -317,7 +317,21 @@ namespace projectEDPforreal
                     MessageBox.Show($"Booking confirmed!\n\nBooking ID: {newBookingId}\nReceipt: {receipt}\nTotal: RM {totalPrice:F2}",
                         "Booking Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    Receipt receiptForm = new Receipt();
+                    string userName = tbUsername.Text;
+                    string userPhone = tbPhone.Text;
+                    string selectedMethod = cmbBxPaymentMethod.SelectedItem.ToString();
+                    Receipt receiptForm = new Receipt(
+                    userName,
+                    userPhone,
+                    newPaymentId,
+                    newBookingId,
+                    selectedMethod,
+                    DateTime.Today,
+                    totalPrice,
+                    "Completed",
+                    receipt
+                    );
+
                     this.Hide();
                     receiptForm.ShowDialog();
                     this.Close();
@@ -328,6 +342,11 @@ namespace projectEDPforreal
                     MessageBox.Show("Booking failed: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+
+        private void tbDesc_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

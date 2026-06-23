@@ -7,14 +7,37 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace projectEDPforreal
 {
     public partial class Receipt : Form
     {
-        public Receipt()
+
+        public Receipt(
+            string name,
+            string phone,
+            int paymentId,
+            int bookingId,
+            string paymentMethod,
+            DateTime paymentDate,
+            decimal amount,
+            string status,
+            string receiptId)
         {
             InitializeComponent();
+
+            // Assigning the passed data into your UI TextBoxes
+            tbName.Text = name;
+            tbPhone.Text = phone;
+            tbPaymentId.Text = paymentId.ToString();
+            tbBookingId.Text = bookingId.ToString();
+            tbPaymentMethod.Text = paymentMethod;
+            tbPaymentDate.Text = paymentDate.ToString("dd MMM yyyy");
+            tbAmount.Text = "RM " + amount.ToString("F2");
+            tbPaymentStatus.Text = status;
+            tbReceiptId.Text = receiptId;
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -75,6 +98,13 @@ namespace projectEDPforreal
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnback_Click(object sender, EventArgs e)
+        {
+            Form1 form1 = new Form1(int.Parse(tbName.Text));
+            this.Hide();
+            form1.ShowDialog();
         }
     }
 }

@@ -38,18 +38,21 @@
             this.tbUsername = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnOnlineBanking = new System.Windows.Forms.Button();
+            this.picBxQr = new System.Windows.Forms.PictureBox();
+            this.grpBxPayment = new System.Windows.Forms.GroupBox();
             this.tbCardName = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.picBxPayment = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.cmbBxPaymentMethod = new System.Windows.Forms.ComboBox();
-            this.btnConfirm = new System.Windows.Forms.Button();
             this.tbCVV = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.tbExpirationDate = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.tbCardNumber = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.picBxPayment = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cmbBxPaymentMethod = new System.Windows.Forms.ComboBox();
+            this.btnConfirm = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.lblTotalPrice = new System.Windows.Forms.Label();
             this.tbQuantity = new System.Windows.Forms.TextBox();
@@ -66,15 +69,12 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.lbleventName = new System.Windows.Forms.Label();
-            this.picBxQr = new System.Windows.Forms.PictureBox();
-            this.grpBxPayment = new System.Windows.Forms.GroupBox();
-            this.btnOnlineBanking = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picBxPayment)).BeginInit();
-            this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBxQr)).BeginInit();
             this.grpBxPayment.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBxPayment)).BeginInit();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -179,6 +179,45 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Payment";
             // 
+            // btnOnlineBanking
+            // 
+            this.btnOnlineBanking.Location = new System.Drawing.Point(154, 144);
+            this.btnOnlineBanking.Name = "btnOnlineBanking";
+            this.btnOnlineBanking.Size = new System.Drawing.Size(143, 72);
+            this.btnOnlineBanking.TabIndex = 19;
+            this.btnOnlineBanking.Text = "Go to Bank Payment Page";
+            this.btnOnlineBanking.UseVisualStyleBackColor = true;
+            this.btnOnlineBanking.Visible = false;
+            // 
+            // picBxQr
+            // 
+            this.picBxQr.BackColor = System.Drawing.Color.LightBlue;
+            this.picBxQr.BackgroundImage = global::projectEDPforreal.Properties.Resources.qr;
+            this.picBxQr.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.picBxQr.Location = new System.Drawing.Point(142, 94);
+            this.picBxQr.Name = "picBxQr";
+            this.picBxQr.Size = new System.Drawing.Size(164, 180);
+            this.picBxQr.TabIndex = 18;
+            this.picBxQr.TabStop = false;
+            this.picBxQr.Visible = false;
+            // 
+            // grpBxPayment
+            // 
+            this.grpBxPayment.Controls.Add(this.tbCardName);
+            this.grpBxPayment.Controls.Add(this.label15);
+            this.grpBxPayment.Controls.Add(this.tbCVV);
+            this.grpBxPayment.Controls.Add(this.label6);
+            this.grpBxPayment.Controls.Add(this.tbExpirationDate);
+            this.grpBxPayment.Controls.Add(this.label7);
+            this.grpBxPayment.Controls.Add(this.tbCardNumber);
+            this.grpBxPayment.Controls.Add(this.label8);
+            this.grpBxPayment.Location = new System.Drawing.Point(21, 85);
+            this.grpBxPayment.Name = "grpBxPayment";
+            this.grpBxPayment.Size = new System.Drawing.Size(403, 189);
+            this.grpBxPayment.TabIndex = 18;
+            this.grpBxPayment.TabStop = false;
+            this.grpBxPayment.Visible = false;
+            // 
             // tbCardName
             // 
             this.tbCardName.Location = new System.Drawing.Point(20, 33);
@@ -195,56 +234,6 @@
             this.label15.Size = new System.Drawing.Size(94, 16);
             this.label15.TabIndex = 16;
             this.label15.Text = "Name on Card";
-            // 
-            // picBxPayment
-            // 
-            this.picBxPayment.BackColor = System.Drawing.Color.Transparent;
-            this.picBxPayment.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picBxPayment.ErrorImage = null;
-            this.picBxPayment.InitialImage = null;
-            this.picBxPayment.Location = new System.Drawing.Point(296, 41);
-            this.picBxPayment.Margin = new System.Windows.Forms.Padding(4);
-            this.picBxPayment.Name = "picBxPayment";
-            this.picBxPayment.Size = new System.Drawing.Size(164, 41);
-            this.picBxPayment.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picBxPayment.TabIndex = 15;
-            this.picBxPayment.TabStop = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(29, 31);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(108, 16);
-            this.label2.TabIndex = 14;
-            this.label2.Text = "Payment Method";
-            // 
-            // cmbBxPaymentMethod
-            // 
-            this.cmbBxPaymentMethod.FormattingEnabled = true;
-            this.cmbBxPaymentMethod.Items.AddRange(new object[] {
-            "Credit Card",
-            "Debit Card",
-            "E-Wallet",
-            "Online Banking"});
-            this.cmbBxPaymentMethod.Location = new System.Drawing.Point(32, 53);
-            this.cmbBxPaymentMethod.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cmbBxPaymentMethod.Name = "cmbBxPaymentMethod";
-            this.cmbBxPaymentMethod.Size = new System.Drawing.Size(241, 24);
-            this.cmbBxPaymentMethod.TabIndex = 13;
-            this.cmbBxPaymentMethod.Text = "Please Select A Payment Method";
-            this.cmbBxPaymentMethod.SelectedIndexChanged += new System.EventHandler(this.cmbBxPaymentMethod_SelectedIndexChanged);
-            // 
-            // btnConfirm
-            // 
-            this.btnConfirm.Location = new System.Drawing.Point(111, 284);
-            this.btnConfirm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(195, 46);
-            this.btnConfirm.TabIndex = 12;
-            this.btnConfirm.Text = "Confirm";
-            this.btnConfirm.UseVisualStyleBackColor = true;
-            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
             // 
             // tbCVV
             // 
@@ -296,6 +285,56 @@
             this.label8.Size = new System.Drawing.Size(87, 16);
             this.label8.TabIndex = 6;
             this.label8.Text = "Card Number";
+            // 
+            // picBxPayment
+            // 
+            this.picBxPayment.BackColor = System.Drawing.Color.Transparent;
+            this.picBxPayment.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.picBxPayment.ErrorImage = null;
+            this.picBxPayment.InitialImage = null;
+            this.picBxPayment.Location = new System.Drawing.Point(296, 41);
+            this.picBxPayment.Margin = new System.Windows.Forms.Padding(4);
+            this.picBxPayment.Name = "picBxPayment";
+            this.picBxPayment.Size = new System.Drawing.Size(164, 41);
+            this.picBxPayment.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picBxPayment.TabIndex = 15;
+            this.picBxPayment.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(29, 31);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(108, 16);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "Payment Method";
+            // 
+            // cmbBxPaymentMethod
+            // 
+            this.cmbBxPaymentMethod.FormattingEnabled = true;
+            this.cmbBxPaymentMethod.Items.AddRange(new object[] {
+            "Credit Card",
+            "Debit Card",
+            "E-Wallet",
+            "Online Banking"});
+            this.cmbBxPaymentMethod.Location = new System.Drawing.Point(32, 53);
+            this.cmbBxPaymentMethod.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbBxPaymentMethod.Name = "cmbBxPaymentMethod";
+            this.cmbBxPaymentMethod.Size = new System.Drawing.Size(241, 24);
+            this.cmbBxPaymentMethod.TabIndex = 13;
+            this.cmbBxPaymentMethod.Text = "Please Select A Payment Method";
+            this.cmbBxPaymentMethod.SelectedIndexChanged += new System.EventHandler(this.cmbBxPaymentMethod_SelectedIndexChanged);
+            // 
+            // btnConfirm
+            // 
+            this.btnConfirm.Location = new System.Drawing.Point(111, 284);
+            this.btnConfirm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnConfirm.Name = "btnConfirm";
+            this.btnConfirm.Size = new System.Drawing.Size(195, 46);
+            this.btnConfirm.TabIndex = 12;
+            this.btnConfirm.Text = "Confirm";
+            this.btnConfirm.UseVisualStyleBackColor = true;
+            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
             // 
             // groupBox3
             // 
@@ -388,6 +427,7 @@
             this.tbDesc.ReadOnly = true;
             this.tbDesc.Size = new System.Drawing.Size(298, 59);
             this.tbDesc.TabIndex = 22;
+            this.tbDesc.TextChanged += new System.EventHandler(this.tbDesc_TextChanged);
             // 
             // tbName
             // 
@@ -454,45 +494,6 @@
             this.lbleventName.TabIndex = 14;
             this.lbleventName.Text = "Event Name :";
             // 
-            // picBxQr
-            // 
-            this.picBxQr.BackColor = System.Drawing.Color.LightBlue;
-            this.picBxQr.BackgroundImage = global::projectEDPforreal.Properties.Resources.qr;
-            this.picBxQr.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picBxQr.Location = new System.Drawing.Point(142, 94);
-            this.picBxQr.Name = "picBxQr";
-            this.picBxQr.Size = new System.Drawing.Size(164, 180);
-            this.picBxQr.TabIndex = 18;
-            this.picBxQr.TabStop = false;
-            this.picBxQr.Visible = false;
-            // 
-            // grpBxPayment
-            // 
-            this.grpBxPayment.Controls.Add(this.tbCardName);
-            this.grpBxPayment.Controls.Add(this.label15);
-            this.grpBxPayment.Controls.Add(this.tbCVV);
-            this.grpBxPayment.Controls.Add(this.label6);
-            this.grpBxPayment.Controls.Add(this.tbExpirationDate);
-            this.grpBxPayment.Controls.Add(this.label7);
-            this.grpBxPayment.Controls.Add(this.tbCardNumber);
-            this.grpBxPayment.Controls.Add(this.label8);
-            this.grpBxPayment.Location = new System.Drawing.Point(21, 85);
-            this.grpBxPayment.Name = "grpBxPayment";
-            this.grpBxPayment.Size = new System.Drawing.Size(403, 189);
-            this.grpBxPayment.TabIndex = 18;
-            this.grpBxPayment.TabStop = false;
-            this.grpBxPayment.Visible = false;
-            // 
-            // btnOnlineBanking
-            // 
-            this.btnOnlineBanking.Location = new System.Drawing.Point(154, 144);
-            this.btnOnlineBanking.Name = "btnOnlineBanking";
-            this.btnOnlineBanking.Size = new System.Drawing.Size(143, 72);
-            this.btnOnlineBanking.TabIndex = 19;
-            this.btnOnlineBanking.Text = "Go to Bank Payment Page";
-            this.btnOnlineBanking.UseVisualStyleBackColor = true;
-            this.btnOnlineBanking.Visible = false;
-            // 
             // checkout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -511,12 +512,12 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picBxPayment)).EndInit();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBxQr)).EndInit();
             this.grpBxPayment.ResumeLayout(false);
             this.grpBxPayment.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBxPayment)).EndInit();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
