@@ -124,6 +124,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Ticket2U.xsd</DependentUpon>
     </Compile>
+    <Compile Include="user_bookmark.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="user_bookmark.Designer.cs">
+      <DependentUpon>user_bookmark.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AdminMain.resx">
       <DependentUpon>AdminMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -161,6 +167,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="user_bookmark.resx">
+      <DependentUpon>user_bookmark.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -199,6 +208,7 @@
     <None Include="Resources\tng.jpg" />
     <None Include="Resources\fpx.png" />
     <None Include="Resources\visa.png" />
+    <None Include="Resources\bg.jpg" />
     <Content Include="Ticket2U.mdf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

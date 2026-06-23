@@ -47,6 +47,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnbookmark = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,7 +65,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(745, 9);
+            this.button4.Location = new System.Drawing.Point(555, 9);
             this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(179, 52);
@@ -240,6 +241,18 @@
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
+            // btnbookmark
+            // 
+            this.btnbookmark.Location = new System.Drawing.Point(750, 9);
+            this.btnbookmark.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnbookmark.Name = "btnbookmark";
+            this.btnbookmark.Size = new System.Drawing.Size(179, 52);
+            this.btnbookmark.TabIndex = 27;
+            this.btnbookmark.Text = "Bookmark";
+            this.btnbookmark.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.btnbookmark.UseVisualStyleBackColor = true;
+            this.btnbookmark.Click += new System.EventHandler(this.btnbookmark_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -247,6 +260,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1135, 575);
+            this.Controls.Add(this.btnbookmark);
             this.Controls.Add(this.button12);
             this.Controls.Add(this.button11);
             this.Controls.Add(this.button10);
@@ -291,6 +305,7 @@
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.Button btnbookmark;
     }
 }
 

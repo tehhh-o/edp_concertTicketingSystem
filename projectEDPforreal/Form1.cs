@@ -153,5 +153,14 @@ namespace projectEDPforreal
             detailForm.ShowDialog();
             this.Close();
         }
+
+        private void btnbookmark_Click(object sender, EventArgs e)
+        {
+            user_bookmark bookmark = new user_bookmark(userId);
+            this.Hide();
+            bookmark.ShowDialog();
+            this.Close();
+
+        }
     }
 }
