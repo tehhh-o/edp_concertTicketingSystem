@@ -30,9 +30,10 @@ namespace projectEDPforreal
             lbBookmark.GridLines = true;
             lbBookmark.Columns.Clear();
 
-            lbBookmark.Columns.Add("Bookmark ID", 100);
-            lbBookmark.Columns.Add("User ID", 100);
-            lbBookmark.Columns.Add("Concert ID", 100);
+            lbBookmark.Columns.Add("Bookmark ID", 80);
+            lbBookmark.Columns.Add("User Name", 90);
+            lbBookmark.Columns.Add("Concert ID", 70);
+            lbBookmark.Columns.Add("Concert Name", 220);
             lbBookmark.Columns.Add("Saved Date", 120);
         }
 
@@ -45,13 +46,15 @@ namespace projectEDPforreal
         {
             string connectionString =
                 @"Data Source=(LocalDB)\MSSQLLocalDB;
-                AttachDbFilename=|DataDirectory|\Ticket2U.mdf;
-                Integrated Security=True";
+        AttachDbFilename=|DataDirectory|\Ticket2U.mdf;
+        Integrated Security=True";
 
             string query = @"
-                SELECT bookmark_id, user_id, concert_id, saved_date
-                FROM dbo.BookMark
-                WHERE user_id = @userId";
+        SELECT b.bookmark_id, b.user_id, u.name, b.concert_id, c.concert_name, b.saved_date
+        FROM dbo.BookMark b
+        INNER JOIN dbo.[User] u ON b.user_id = u.user_id
+        INNER JOIN dbo.Concert c ON b.concert_id = c.concert_id
+        WHERE b.user_id = @userId";
 
             try
             {
@@ -69,12 +72,15 @@ namespace projectEDPforreal
                     {
                         int bookmarkId = reader.GetInt32(0);
                         decimal userId = reader.GetDecimal(1);
-                        int concertId = reader.GetInt32(2);
-                        DateTime savedDate = reader.GetDateTime(3);
+                        string userName = reader.GetString(2);
+                        int concertId = reader.GetInt32(3);
+                        string concertName = reader.GetString(4);
+                        DateTime savedDate = reader.GetDateTime(5);
 
                         ListViewItem item = new ListViewItem(bookmarkId.ToString());
-                        item.SubItems.Add(userId.ToString());
+                        item.SubItems.Add(userName);
                         item.SubItems.Add(concertId.ToString());
+                        item.SubItems.Add(concertName);
                         item.SubItems.Add(savedDate.ToString("yyyy-MM-dd"));
 
                         lbBookmark.Items.Add(item);

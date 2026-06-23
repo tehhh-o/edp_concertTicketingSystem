@@ -43,6 +43,7 @@
             this.rowA = new System.Windows.Forms.CheckBox();
             this.label9 = new System.Windows.Forms.Label();
             this.btn_back = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.eventPicBox)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -71,6 +72,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.SteelBlue;
+            this.groupBox1.Controls.Add(this.btnAdd);
             this.groupBox1.Controls.Add(this.lblDate);
             this.groupBox1.Controls.Add(this.lblLocation);
             this.groupBox1.Controls.Add(this.eventPicBox);
@@ -209,6 +211,18 @@
             this.btn_back.UseVisualStyleBackColor = true;
             this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
             // 
+            // btnAdd
+            // 
+            this.btnAdd.BackColor = System.Drawing.Color.LightCyan;
+            this.btnAdd.Location = new System.Drawing.Point(629, 19);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(137, 40);
+            this.btnAdd.TabIndex = 20;
+            this.btnAdd.Text = "Add To Bookmark";
+            this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
             // eventdetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -250,5 +264,6 @@
         private System.Windows.Forms.ListBox lstSeats;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btn_back;
+        private System.Windows.Forms.Button btnAdd;
     }
 }

@@ -154,5 +154,57 @@ namespace projectEDPforreal
             checkoutForm.ShowDialog();
             this.Close();
         }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            string connectionString =
+               @"Data Source=(LocalDB)\MSSQLLocalDB;
+                AttachDbFilename=|DataDirectory|\Ticket2U.mdf;
+                Integrated Security=True";
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+
+                // Check if bookmark already exists
+                string checkQuery =
+                    "SELECT COUNT(*) FROM BookMark " +
+                    "WHERE user_id = @user_id AND concert_id = @concert_id";
+
+                SqlCommand checkCmd = new SqlCommand(checkQuery, conn);
+                checkCmd.Parameters.AddWithValue("@user_id", userId);
+                checkCmd.Parameters.AddWithValue("@concert_id", concertID);
+
+                int existing = (int)checkCmd.ExecuteScalar();
+
+                if (existing > 0)
+                {
+                    MessageBox.Show("This concert is already bookmarked.",
+                        "Already Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+
+                // Get next bookmark_id
+                string maxIdQuery = "SELECT ISNULL(MAX(bookmark_id), 0) + 1 FROM BookMark";
+                SqlCommand maxIdCmd = new SqlCommand(maxIdQuery, conn);
+                int newBookmarkId = (int)maxIdCmd.ExecuteScalar();
+
+                // Insert bookmark
+                string insertQuery =
+                    "INSERT INTO BookMark (bookmark_id, user_id, concert_id, saved_date) " +
+                    "VALUES (@bookmark_id, @user_id, @concert_id, @saved_date)";
+
+                SqlCommand insertCmd = new SqlCommand(insertQuery, conn);
+                insertCmd.Parameters.AddWithValue("@bookmark_id", newBookmarkId);
+                insertCmd.Parameters.AddWithValue("@user_id", userId);
+                insertCmd.Parameters.AddWithValue("@concert_id", concertID);
+                insertCmd.Parameters.AddWithValue("@saved_date", DateTime.Today);
+
+                insertCmd.ExecuteNonQuery();
+
+                MessageBox.Show("Concert bookmarked successfully!",
+                    "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
     }
 }
