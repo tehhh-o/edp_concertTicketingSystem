@@ -321,6 +321,7 @@ namespace projectEDPforreal
                     string userPhone = tbPhone.Text;
                     string selectedMethod = cmbBxPaymentMethod.SelectedItem.ToString();
                     Receipt receiptForm = new Receipt(
+                    userId,
                     userName,
                     userPhone,
                     newPaymentId,

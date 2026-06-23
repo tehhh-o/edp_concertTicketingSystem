@@ -14,8 +14,10 @@ namespace projectEDPforreal
 {
     public partial class Receipt : Form
     {
+        int userid;
 
         public Receipt(
+            int id,
             string name,
             string phone,
             int paymentId,
@@ -29,6 +31,7 @@ namespace projectEDPforreal
             InitializeComponent();
 
             // Assigning the passed data into your UI TextBoxes
+            this.userid = id;
             tbName.Text = name;
             tbPhone.Text = phone;
             tbPaymentId.Text = paymentId.ToString();
@@ -102,7 +105,7 @@ namespace projectEDPforreal
 
         private void btnback_Click(object sender, EventArgs e)
         {
-            Form1 form1 = new Form1(int.Parse(tbName.Text));
+            Form1 form1 = new Form1(userid);
             this.Hide();
             form1.ShowDialog();
         }

@@ -35,30 +35,41 @@ namespace projectEDPforreal
                 {
                     con.Open();
 
-                    string query = "SELECT user_id FROM [User] WHERE (name = @username OR email = @username) AND password = @password";
+                    string query = "SELECT user_id, user_type FROM [User] WHERE (name = @username OR email = @username) AND password = @password";
 
                     using (SqlCommand cmd = new SqlCommand(query, con))
                     {
-
                         cmd.Parameters.AddWithValue("@username", txtLoginEmail.Text.Trim());
                         cmd.Parameters.AddWithValue("@password", txtLoginPassword.Text.Trim());
 
-                        object result = cmd.ExecuteScalar();
-
-                        if (result != null)
+                        using (SqlDataReader reader = cmd.ExecuteReader())
                         {
-                            int userId = Convert.ToInt32(result);
-                            MessageBox.Show("Log In Successful!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            if (reader.Read())
+                            {
+                                int userId = Convert.ToInt32(reader["user_id"]);
+                                string userType = reader["user_type"].ToString().Trim().ToLower();
 
-                            this.Hide();
-                            Form1 main = new Form1(userId);
-                            main.ShowDialog();
-                            this.Close();
+                                MessageBox.Show("Log In Successful!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                        }
-                        else
-                        {
-                            MessageBox.Show("Nama/Emel atau Kata Laluan salah. Sila cuba lagi.", "Ralat", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                this.Hide();
+
+                                if (userType == "admin")
+                                {
+                                    AdminMain adminForm = new AdminMain();
+                                    adminForm.ShowDialog();
+                                }
+                                else
+                                {
+                                    Form1 main = new Form1(userId);
+                                    main.ShowDialog();
+                                }
+
+                                this.Close();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Nama/Emel atau Kata Laluan salah. Sila cuba lagi.", "Ralat", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
                         }
                     }
                 }

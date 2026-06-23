@@ -56,8 +56,8 @@ namespace projectEDPforreal
             {
                 using (SqlConnection con = new SqlConnection(
                     @"Data Source=(LocalDB)\MSSQLLocalDB;
-      AttachDbFilename=|DataDirectory|\Ticket2U.mdf;
-      Integrated Security=True"))
+                      AttachDbFilename=|DataDirectory|\Ticket2U.mdf;
+                      Integrated Security=True"))
                 {
                     con.Open();
 
@@ -83,6 +83,8 @@ namespace projectEDPforreal
                 MessageBox.Show("Sign up successful!", "", MessageBoxButtons.OK, MessageBoxIcon.Information) ;
 
                 this.Hide();
+                Login login = new Login();
+                login.ShowDialog();
                 this.Close();
 
             }

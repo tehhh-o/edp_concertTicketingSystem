@@ -42,8 +42,8 @@ namespace projectEDPforreal
         private void signupBtn_Click(object sender, EventArgs e)
         {
             this.Hide();
-            signup Signup = new signup();
-            Signup.ShowDialog();
+            Login login = new Login();
+            login.ShowDialog();
             this.Close();
         }
 
